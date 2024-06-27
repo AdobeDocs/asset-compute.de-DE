@@ -2,10 +2,10 @@
 title: Machen Sie sich mit der Funktionsweise eines benutzerdefinierten Programms vertraut
 description: Interne Funktionsweise eines benutzerdefinierten  [!DNL Asset Compute Service] -Programms, um dessen Funktionsweise besser zu verstehen.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: 5257e091730f3672c46dfbe45c3e697a6555e6b1
+source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 100%
+source-wordcount: '691'
+ht-degree: 80%
 
 ---
 
@@ -15,11 +15,11 @@ Verwenden Sie die folgende Abbildung, um den durchgängigen Workflow zu verstehe
 
 ![Workflow für benutzerdefinierte Programme](assets/customworker.svg)
 
-*Abbildung: Schritte zur Verarbeitung eines Assets mit [!DNL Asset Compute Service].*
+*Abbildung: Schritte bei der Verarbeitung eines Assets mithilfe von Adobe [!DNL Asset Compute Service].*
 
 ## Registrierung {#registration}
 
-Der Client muss [`/register`](api.md#register) vor der ersten Anfrage an [`/process`](api.md#process-request) einmal aufrufen, um die Journal-URL für den Empfang von [!DNL Adobe I/O]-Ereignissen für Adobe Asset Compute einzurichten und abzurufen.
+Der Client muss aufrufen [`/register`](api.md#register) einmal vor der ersten Anfrage an [`/process`](api.md#process-request) , damit es die Journal-URL für den Empfang von Adobe einrichten und abrufen kann [!DNL I/O Events] Ereignisse für Adobe-Asset compute.
 
 ```sh
 curl -X POST \
@@ -70,7 +70,7 @@ Nachfolgend finden Sie eine Beispielanfrage zur Verarbeitung benutzerdefinierter
 
 [!DNL Asset Compute Service] sendet die Ausgabedarstellungsanfragen für das benutzerdefinierte Programm an das benutzerdefinierte Programm. Der Service sendet eine HTTP-POST-Anfrage an die angegebene Programm-URL, bei der es sich um die gesicherte Web-Aktions-URL von App Builder handelt. Alle Anfragen verwenden das HTTPS-Protokoll, um die Datensicherheit zu maximieren.
 
-Das von einem benutzerdefinierten Programm verwendete [Asset Compute-SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) verarbeitet die HTTP-POST-Anfrage. Es übernimmt auch das Herunterladen der Quelle, das Hochladen von Ausgabedarstellungen, das Senden von [!DNL Adobe I/O]-Ereignissen und die Fehlerbehandlung.
+Das von einem benutzerdefinierten Programm verwendete [Asset Compute-SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) verarbeitet die HTTP-POST-Anfrage. Es übernimmt auch das Herunterladen der Quelle, das Hochladen von Ausgabedarstellungen, das Senden von Adobe [!DNL I/O Events] und Fehlerbehandlung.
 
 <!-- TBD: Add the application diagram. -->
 
@@ -96,7 +96,7 @@ exports.main = worker(async (source, rendition) => {
 
 ### Herunterladen von Quelldateien {#download-source}
 
-Ein benutzerdefiniertes Programm behandelt nur lokale Dateien. Das Herunterladen der Quelldatei erfolgt über das [Asset Compute-SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk).
+Ein benutzerdefiniertes Programm behandelt nur lokale Dateien. Die [ASSET COMPUTE SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) verarbeitet das Herunterladen der Quelldatei.
 
 ### Erstellen von Ausgabedarstellungen {#rendition-creation}
 
@@ -112,15 +112,15 @@ Weitere Informationen zu den Callback-Parametern für Ausgabedarstellungen finde
 
 Nachdem jede Ausgabedarstellung erstellt und in einer Datei mit dem in `rendition.path` angegebenen Pfad gespeichert wurde, lädt das [Asset Compute-SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) jede Ausgabedarstellung in einen Cloud-Speicher hoch (entweder AWS oder Azure). Ein benutzerdefiniertes Programm erhält genau dann mehrere Ausgabedarstellungen gleichzeitig, wenn die eingehende Anfrage mehrere Ausgabedarstellungen enthält, die auf dieselbe Programm-URL verweisen. Der Upload in den Cloud-Speicher erfolgt nach jeder Ausgabedarstellung und vor dem Ausführen des Callback für die nächste Ausgabedarstellung.
 
-Das Verhalten von `batchWorker()` unterscheidet sich, da sie tatsächlich alle Ausgabedarstellungen verarbeitet und diese erst hochlädt, nachdem alle verarbeitet wurden.
+Die `batchWorker()` hat ein anderes Verhalten. Es verarbeitet alle Ausgabedarstellungen und lädt sie erst hoch, nachdem alle verarbeitet wurden.
 
 ## [!DNL Adobe I/O]-Ereignisse {#aio-events}
 
-Das SDK sendet [!DNL Adobe I/O]-Ereignisse für jede Ausgabedarstellung. Diese Ereignisse sind je nach Ergebnis entweder vom Typ `rendition_created` oder `rendition_failed`. Weitere Informationen zu Ereignissen finden Sie unter [Asynchrone Asset Compute-Ereignisse](api.md#asynchronous-events).
+Das SDK sendet Adobe [!DNL I/O Events] für jede Ausgabedarstellung. Diese Ereignisse sind je nach Ergebnis entweder vom Typ `rendition_created` oder `rendition_failed`. Weitere Informationen finden Sie unter [Asynchrone asset compute-Ereignisse](api.md#asynchronous-events).
 
 ## [!DNL Adobe I/O]-Ereignisse empfangen  {#receive-aio-events}
 
-Der Client fragt das [[!DNL Adobe I/O] -Ereignisjournal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) gemäß seiner Verbrauchslogik ab. Die anfängliche Journal-URL ist die in der `/register`-API-Antwort angegebene. Ereignisse können mit der in den Ereignissen vorhandenen `requestId` identifiziert werden, die mit der in `/process` zurückgegebenen übereinstimmt. Jede Ausgabedarstellung verfügt über ein separates Ereignis, das gesendet wird, sobald die Ausgabedarstellung hochgeladen wurde (oder fehlgeschlagen ist). Sobald der Client ein passendes Ereignis erhält, kann er die resultierenden Ausgabedarstellungen anzeigen oder anderweitig verarbeiten.
+Der Client fragt die Adobe ab [!DNL I/O Events] -Journal gemäß seiner Verbrauchslogik. Die anfängliche Journal-URL ist die in der `/register`-API-Antwort angegebene. Ereignisse können mit der in den Ereignissen vorhandenen `requestId` identifiziert werden, die mit der in `/process` zurückgegebenen übereinstimmt. Jede Ausgabedarstellung verfügt über ein separates Ereignis, das gesendet wird, sobald die Ausgabedarstellung hochgeladen wurde (oder fehlgeschlagen ist). Wenn er ein übereinstimmendes Ereignis erhält, kann der Client die resultierenden Ausgabedarstellungen anzeigen oder anderweitig verarbeiten.
 
 Die JavaScript-Bibliothek [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) vereinfacht die Journalabfrage mithilfe der `waitActivation()`-Methode zum Abrufen aller Ereignisse.
 
@@ -140,7 +140,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-Weitere Informationen zum Abrufen von Journalereignissen finden Sie unter [[!DNL Adobe I/O]  Events-API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
+Weitere Informationen zum Abrufen von Journalereignissen finden Sie unter Adobe [[!DNL I/O Events] API](https://developer.adobe.com/events/docs/guides/api/journaling_api/).
 
 <!-- TBD:
 * Illustration of the controls/data flow.
