@@ -12,10 +12,10 @@ feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.de-DE
 index: y
 recommendations: noDisplay
-source-git-commit: cb87ab6081d53610acf27419fa5103b3ae1ead03
+source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 100%
+source-wordcount: '132'
+ht-degree: 92%
 
 ---
 
@@ -28,11 +28,11 @@ Die metadata.md-Datei enthält Metadaten auf Repo-Ebene, die über die TOC.md-Da
 |--- |--- |
 | solution-title | Wird in der Artikelkopfzeile als Link verwendet |
 | solution-hub-url | Öffnet die Support-Hub-Seite |
-| solution-icon | Zeigt das Lösungssymbol neben Lösungstitel an. Noch nicht implementiert |
+| solution-icon | Zeigt das Lösungssymbol neben dem Lösungstitel an. Noch nicht implementiert |
 | getting-started-url | Link zur Seite „Erste Schritte“ |
-| tutorials-url | Link zu Video-Tutorials – entweder helpx-Tutorials oder KT-Tutorials |
+| tutorials-url | Link zu Video-Tutorials - entweder Helpx-Tutorials oder Knowledge Transfer-Tutorials |
 | mini-toc-levels | Legt die Anzahl der Überschriftenebenen fest, die in der rechten Leiste angezeigt werden. Standard ist 2 |
-| git-repo | Gibt den Speicherort des primären Repo für die interne Verwendung an |
+| git-repo | Gibt den Speicherort des primären Repo für die interne Verwendung an. |
 
 In der Datei TOC.md
 
