@@ -1,11 +1,11 @@
 ---
 source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '494'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
-# Beiträge zur Dokumentation
+# Beitragen zur Dokumentation
 
 Vielen Dank, dass Sie zur Dokumentation beitragen möchten! Adobe begrüßt Inhaltsbeiträge der gesamten Leser-Community und von Adobe-Mitarbeitenden.
 

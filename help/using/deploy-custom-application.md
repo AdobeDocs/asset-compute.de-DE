@@ -3,9 +3,9 @@ title: Bereitstellen eines benutzerdefinierten  [!DNL Asset Compute Service] -Pr
 description: Bereitstellen eines benutzerdefinierten  [!DNL Asset Compute Service] -Programms.
 exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
 source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '170'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ Stellen Sie sicher, dass Ihr App Builder-Projekt und der Arbeitsbereich der Umge
 
 >[!CAUTION]
 >
->Verwenden Sie keinen persönlichen Arbeitsbereich für wichtige Aufgaben. [!DNL Experience Manager] Umgebungen.
+>Verwenden Sie keine persönlichen Arbeitsbereiche in wichtigen [!DNL Experience Manager]-Umgebungen.
 
 >[!MORELIKETHIS]
 >
