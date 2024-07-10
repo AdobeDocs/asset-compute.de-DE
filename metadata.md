@@ -13,9 +13,9 @@ git-repo: https://github.com/AdobeDocs/asset-compute.de-DE
 index: y
 recommendations: noDisplay
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '132'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -30,9 +30,9 @@ Die metadata.md-Datei enthält Metadaten auf Repo-Ebene, die über die TOC.md-Da
 | solution-hub-url | Öffnet die Support-Hub-Seite |
 | solution-icon | Zeigt das Lösungssymbol neben dem Lösungstitel an. Noch nicht implementiert |
 | getting-started-url | Link zur Seite „Erste Schritte“ |
-| tutorials-url | Link zu Video-Tutorials - entweder Helpx-Tutorials oder Knowledge Transfer-Tutorials |
+| tutorials-url | Link zu Video-Tutorials – entweder Helpx- oder Wissenstransfer-Tutorials |
 | mini-toc-levels | Legt die Anzahl der Überschriftenebenen fest, die in der rechten Leiste angezeigt werden. Standard ist 2 |
-| git-repo | Gibt den Speicherort des primären Repo für die interne Verwendung an. |
+| git-repo | Gibt den Speicherort des primären Repo für die interne Verwendung an |
 
 In der Datei TOC.md
 

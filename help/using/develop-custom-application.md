@@ -3,9 +3,9 @@ title: Entwickeln für  [!DNL Asset Compute Service]
 description: Erstellen Sie benutzerdefinierte Programme mit  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1507'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
@@ -19,15 +19,15 @@ Bevor Sie mit der Entwicklung eines benutzerdefinierten Programms beginnen:
 
 ## Erstellen eines benutzerdefinierten Programms {#create-custom-application}
 
-Stellen Sie sicher, dass [Adobe aio-cli](https://github.com/adobe/aio-cli) lokal installiert.
+Stellen Sie sicher, dass [Adobe aio-cli](https://github.com/adobe/aio-cli) lokal installiert ist.
 
-1. Um ein benutzerdefiniertes Programm zu erstellen, [erstellen Sie ein App Builder-Projekt](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Führen Sie dazu `aio app init <app-name>` in Ihrem Terminal.
+1. Um ein benutzerdefiniertes Programm zu erstellen, [erstellen Sie ein App Builder-Projekt](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Führen Sie dazu `aio app init <app-name>` im Terminal aus.
 
    Wenn Sie sich noch nicht angemeldet haben, fordert Sie dieser Befehl in einem Browser auf, sich mit Ihrer Adobe ID bei der [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) anzumelden. Weitere Informationen zum Anmelden von der CLI finden Sie [hier](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli).
 
-   Adobe empfiehlt, sich zuerst anzumelden. Wenn Probleme auftreten, folgen Sie den Anweisungen. [, um eine App ohne Anmeldung zu erstellen](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe empfiehlt, dass Sie sich zuerst anmelden. Sollten Sie Probleme haben, befolgen Sie die Anweisungen zum [Erstellen einer App, ohne sich anzumelden](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
-1. Befolgen Sie nach dem Anmelden die Anweisungen in der CLI und wählen Sie die Parameter `Organization`, `Project` und `Workspace` für das Programm aus. Wählen Sie das Projekt und den Arbeitsbereich aus, die Sie beim Erstellen erstellt haben [Einrichten der Umgebung](setup-environment.md). Beantworten Sie die Frage `Which extension point(s) do you wish to implement ?` mit `DX Asset Compute Worker`:
+1. Befolgen Sie nach dem Anmelden die Anweisungen in der CLI und wählen Sie die Parameter `Organization`, `Project` und `Workspace` für das Programm aus. Wählen Sie das Projekt und den Arbeitsbereich aus, das bzw. den Sie beim [Einrichten der Umgebung](setup-environment.md) erstellt haben. Beantworten Sie die Frage `Which extension point(s) do you wish to implement ?` mit `DX Asset Compute Worker`:
 
    ```sh
    $ aio app init <app-name>
@@ -64,7 +64,7 @@ Stellen Sie sicher, dass [Adobe aio-cli](https://github.com/adobe/aio-cli) lokal
 
    Informationen über die [Hauptkomponenten eines App Builder-Programms](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
-   Die Vorlagenanwendung nutzt Adobe [ASSET COMPUTE SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) für das Hochladen, Herunterladen und Orchestrieren von Anwendungsdarstellungen, sodass Entwickler nur die benutzerdefinierte Programmlogik implementieren müssen. Innerhalb des Ordners `actions/<worker-name>` befindet sich die Datei `index.js`, in der der benutzerdefinierte Programm-Code eingefügt werden kann.
+   Die Vorlagenanwendung nutzt das [Asset Compute-SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) von Adobe zum Hochladen, Herunterladen und Orchestrieren von Anwendungsdarstellungen, sodass die Entwickelnden lediglich die benutzerdefinierte Anwendungslogik implementieren müssen. Innerhalb des Ordners `actions/<worker-name>` befindet sich die Datei `index.js`, in der der benutzerdefinierte Programm-Code eingefügt werden kann.
 
 Beispiele und Ideen für benutzerdefinierte Programme finden Sie unter [Beispiele für benutzerdefinierte Programme](#try-sample).
 
@@ -79,17 +79,17 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 
 #### Anmeldeinformationen für die Datenspeicherung des Entwickler-Tools {#developer-tool-credentials}
 
-Das Tool für Entwickler zum Auswerten benutzerdefinierter Apps mithilfe des [!DNL Asset Compute service] erfordert die Verwendung eines Cloud-Speichercontainers. Dieser Container ist für die Speicherung von Testdateien sowie für den Empfang und die Darstellung von Ausgabedarstellungen, die von den Apps erstellt werden, unerlässlich.
+Das Tool für Entwickelnde zum Auswerten benutzerdefinierter Apps mithilfe des [!DNL Asset Compute service] setzt die Verwendung eines Cloud-Speicher-Containers voraus. Dieser Container ist für die Speicherung von Testdateien sowie für den Empfang und die Darstellung der von den Apps erstellten Ausgabedarstellungen unerlässlich.
 
 >[!NOTE]
 >
->Dieser Container ist getrennt vom Cloud-Speicher von [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]. Dies gilt nur für das Entwickeln und Testen mit dem Asset Compute-Entwickler-Tool.
+>Dieser Container ist separat vom Cloud-Speicher von [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]. Dies gilt nur für das Entwickeln und Testen mit dem Asset Compute-Entwickler-Tool.
 
-Stellen Sie sicher, dass Sie Zugriff auf einen [unterstützten Cloud-Speicher-Container](https://github.com/adobe/asset-compute-devtool#prerequisites) haben. Dieser Container wird bei Bedarf von verschiedenen Entwicklern für verschiedene Projekte gemeinsam verwendet.
+Stellen Sie sicher, dass Sie Zugriff auf einen [unterstützten Cloud-Speicher-Container](https://github.com/adobe/asset-compute-devtool#prerequisites) haben. Dieser Container wird bei Bedarf von verschiedenen Entwickelnden für verschiedene Projekte gemeinsam verwendet.
 
 #### Hinzufügen von Anmeldeinformationen zur ENV-Datei {#add-credentials-env-file}
 
-Fügen Sie die nachfolgenden Anmeldeinformationen für das Entwicklungstool in die `.env` -Datei. Die Datei befindet sich im Stammverzeichnis Ihres App Builder-Projekts:
+Fügen Sie die nachfolgenden Anmeldeinformationen für das Entwicklungs-Tool in die `.env`-Datei ein. Die Datei befindet sich im Stammverzeichnis des App Builder-Projekts:
 
 1. So fügen Sie den absoluten Pfad zu der privaten Schlüsseldatei hinzu, die beim Hinzufügen von Services zu Ihrem App Builder-Projekt erstellt wurde:
 
@@ -100,7 +100,7 @@ Fügen Sie die nachfolgenden Anmeldeinformationen für das Entwicklungstool in d
 1. Laden Sie die Datei über die Adobe Developer Console herunter. Gehen Sie zum Stammverzeichnis des Projekts und klicken Sie in der rechten oberen Ecke auf „Alle herunterladen“. Die Datei wird mit `<namespace>-<workspace>.json` als Dateiname heruntergeladen. Führen Sie einen der folgenden Schritte aus:
 
    * Benennen Sie die Datei in `console.json` um und verschieben Sie sie in den Stammordner Ihres Projekts.
-   * Optional können Sie den absoluten Pfad der JSON-Datei für die Adobe Developer Console-Integration hinzufügen. Diese Datei ist identisch [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) -Datei, die in Ihren Projekt-Arbeitsbereich heruntergeladen wird.
+   * Optional können Sie den absoluten Pfad der JSON-Datei für die Adobe Developer Console-Integration hinzufügen. Hierbei handelt es sich um dieselbe Datei [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user), die Sie in Ihrem Projektarbeitsbereich heruntergeladen haben.
 
      ```conf
      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -123,13 +123,13 @@ Fügen Sie die nachfolgenden Anmeldeinformationen für das Entwicklungstool in d
 
 >[!TIP]
 >
->Die Datei `config.json` enthält Anmeldeinformationen. Fügen Sie die JSON-Datei innerhalb des Projekts zu Ihrer Datei `.gitignore` hinzu, um die Freigabe zu verhindern. Dasselbe gilt für `.env` und `.aio` -Dateien.
+>Die Datei `config.json` enthält Anmeldeinformationen. Fügen Sie die JSON-Datei innerhalb des Projekts zu Ihrer Datei `.gitignore` hinzu, um die Freigabe zu verhindern. Dasselbe gilt für `.env`- und `.aio`-Dateien.
 
 ## Ausführen des Programms {#run-custom-application}
 
-Bevor Sie die Anwendung mit dem Asset compute-Entwickler-Tool ausführen, müssen Sie die [Anmeldeinformationen](#developer-tool-credentials).
+Bevor Sie die Anwendung mit dem Asset Compute-Entwickler-Tool ausführen, müssen Sie die [Anmeldeinformationen](#developer-tool-credentials) ordnungsgemäß konfigurieren.
 
-Um das Programm im Entwickler-Tool auszuführen, verwenden Sie den Befehl `aio app run`. Die Aktion wird auf dem Adobe bereitgestellt [!DNL I/O Runtime]und startet das Entwicklungs-Tool auf Ihrem lokalen Computer. Dieses Tool wird zum Testen von Programmanforderungen während der Entwicklung verwendet. Hier finden Sie ein Beispiel für eine Ausgabedarstellungsanforderung:
+Um das Programm im Entwickler-Tool auszuführen, verwenden Sie den Befehl `aio app run`. Die Aktion wird in Adobe [!DNL I/O Runtime] bereitgestellt und das Entwicklungs-Tool wird auf Ihrem lokalen Computer gestartet. Dieses Tool wird zum Testen von Programmanforderungen während der Entwicklung verwendet. Hier finden Sie ein Beispiel für eine Ausgabedarstellungsanforderung:
 
 ```json
 "renditions": [
@@ -142,7 +142,7 @@ Um das Programm im Entwickler-Tool auszuführen, verwenden Sie den Befehl `aio a
 
 >[!NOTE]
 >
->Verwenden Sie das Flag `--local` nicht mit dem Befehl `run`. Es funktioniert nicht mit [!DNL Asset Compute] benutzerdefinierte Programme und das Asset compute-Entwickler-Tool. Benutzerdefinierte Anwendungen werden von der [!DNL Asset Compute] -Dienst, der nicht auf Aktionen zugreifen kann, die auf den lokalen Computern des Entwicklers ausgeführt werden.
+>Verwenden Sie das Flag `--local` nicht mit dem Befehl `run`. Es funktioniert nicht mit benutzerdefinierten [!DNL Asset Compute]-Anwendungen und dem Asset Compute-Entwickler-Tool. Benutzerdefinierte Anwendungen werden vom [!DNL Asset Compute]-Service aufgerufen, der nicht auf Aktionen zugreifen kann, die auf den lokalen Entwickler-Computern ausgeführt werden.
 
 Weitere Informationen zum Testen und Debuggen Ihres Programms finden Sie [hier](test-custom-application.md). Wenn Sie mit der Entwicklung Ihres benutzerdefinierten Programms fertig sind, [stellen Sie Ihr benutzerdefiniertes Programm](deploy-custom-application.md) bereit.
 
@@ -159,7 +159,7 @@ Im Folgenden finden Sie Beispiele für benutzerdefinierte Programme:
 
 Die Programmdatei [`worker-basic.js`](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) verwendet das [`asset-compute-sdk`](https://github.com/adobe/asset-compute-sdk#overview), um die Quelldatei herunterzuladen, die jeweilige Ausgabedarstellungsverarbeitung zu koordinieren und die resultierenden Ausgabedarstellungen zurück in den Cloud-Speicher hochzuladen.
 
-Die [`renditionCallback`](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) innerhalb des Anwendungs-Codes definiert ist, wo die gesamte Anwendungsverarbeitungslogik ausgeführt werden soll. Der Ausgabedarstellungs-Callback in `worker-basic` kopiert einfach den Inhalt der Quelldatei in die Ausgabedarstellungsdatei.
+In dem im Anwendungs-Code definierten [`renditionCallback`](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) wird die gesamte Anwendungsverarbeitungslogik ausgeführt. Der Ausgabedarstellungs-Callback in `worker-basic` kopiert einfach den Inhalt der Quelldatei in die Ausgabedarstellungsdatei.
 
 ```javascript
 const { worker } = require('@adobe/asset-compute-sdk');
@@ -173,7 +173,7 @@ exports.main = worker(async (source, rendition) => {
 
 ## Aufrufen einer externen API {#call-external-api}
 
-Im Programm-Code können Sie externe API-Aufrufe durchführen, um die Programmverarbeitung zu unterstützen. Nachfolgend finden Sie eine Beispielanwendungsdatei, die eine externe API aufruft.
+Im Programm-Code können Sie externe API-Aufrufe durchführen, um die Programmverarbeitung zu unterstützen. Nachfolgend finden Sie ein Beispiel für eine Anwendungsdatei, die eine externe API aufruft.
 
 ```javascript
 exports.main = worker(async function (source, rendition) {
@@ -207,7 +207,7 @@ Sie können benutzerdefinierte Parameter über die Ausgabedarstellungsobjekte ü
 ]
 ```
 
-Ein Beispiel für eine Anwendungsdatei, die auf einen benutzerdefinierten Parameter zugreift:
+Dies ist ein Beispiel für eine Anwendungsdatei, die auf benutzerdefinierte Parameter zugreift:
 
 ```javascript
 exports.main = worker(async function (source, rendition) {
@@ -222,7 +222,7 @@ exports.main = worker(async function (source, rendition) {
 
 ## Unterstützung bei Authentifizierung und Autorisierung {#authentication-authorization-support}
 
-Standardmäßig enthalten benutzerdefinierte Asset compute-Anwendungen Autorisierungs- und Authentifizierungsprüfungen für das App Builder-Projekt. Aktiviert durch Festlegen der `require-adobe-auth` Anmerkung zu `true` im `manifest.yml`.
+Standardmäßig werden benutzerdefinierte Asset Compute-Anwendungen mit Autorisierungs- und Authentifizierungsprüfungen für das App Builder-Projekt bereitgestellt. Die Aktivierung erfolgt, indem die Anmerkung `require-adobe-auth` in der Datei `manifest.yml` auf `true` gesetzt wird.
 
 ### Zugriff auf andere Adobe-APIs {#access-adobe-apis}
 
@@ -239,7 +239,7 @@ const orgId = params.auth.orgId; // Experience Cloud Organization
 
 ### Übergeben von Anmeldeinformationen für Drittanbietersysteme {#pass-credentials-for-tp}
 
-Um Anmeldeinformationen für andere externe Dienste zu verarbeiten, übergeben Sie sie als Standardparameter für die Aktionen. Sie werden automatisch während der Übertragung verschlüsselt. Weitere Informationen finden Sie unter [Erstellen von Aktionen im Adobe I/O Runtime-Entwicklerhandbuch](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/). Legen Sie sie dann während der Bereitstellung mithilfe von Umgebungsvariablen fest. Auf diese Parameter kann im Objekt `params` innerhalb der Aktion zugegriffen werden.
+Um Anmeldeinformationen für andere externe Services zu verarbeiten, übergeben Sie diese als Standardparameter für die Aktionen. Sie werden bei der Übertragung automatisch verschlüsselt. Weitere Informationen finden Sie unter [„Erstellen von Aktionen“ im Adobe I/O Runtime-Entwicklerhandbuch](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/). Legen Sie sie dann während der Bereitstellung mithilfe von Umgebungsvariablen fest. Auf diese Parameter kann im Objekt `params` innerhalb der Aktion zugegriffen werden.
 
 Legen Sie die Standardparameter in `inputs` in der Datei `manifest.yml` fest:
 
@@ -259,7 +259,7 @@ packages:
 
 Der Ausdruck `$VAR` liest den Wert aus einer Umgebungsvariablen mit dem Namen `VAR`.
 
-Bei der Entwicklung können Sie den Wert im lokalen `.env` -Datei. Der Grund dafür ist, dass `aio` importiert automatisch Umgebungsvariablen aus `.env` -Dateien zusammen mit den Variablen, die von der Initiierungs-Shell festgelegt werden. In diesem Beispiel wird die `.env` -Datei sieht wie folgt aus:
+Bei der Entwicklung können Sie den Wert in der lokalen `.env`-Datei zuweisen. Der Grund dafür ist, dass `aio` Umgebungsvariablen aus `.env`-Dateien automatisch zusammen mit den von der Initiierungs-Shell festgelegten Variablen importiert. In diesem Beispiel sieht die `.env`-Datei wie folgt aus:
 
 ```CONF
 #...
@@ -274,7 +274,7 @@ const key = params.secretKey;
 
 ## Dimensionieren von Programmen {#sizing-workers}
 
-Eine Anwendung wird in einem Container im Adobe ausgeführt [!DNL I/O Runtime] mit [limits](https://developer.adobe.com/runtime/docs/guides/using/system_settings/) , die über die `manifest.yml`:
+Eine Anwendung wird in einem Container in Adobe [!DNL I/O Runtime] mit [Beschränkungen](https://developer.adobe.com/runtime/docs/guides/using/system_settings/) ausgeführt, die über `manifest.yml` konfiguriert werden können:
 
 ```yaml
     actions:
@@ -286,14 +286,14 @@ Eine Anwendung wird in einem Container im Adobe ausgeführt [!DNL I/O Runtime] m
           concurrency: 1
 ```
 
-Aufgrund der umfangreichen Verarbeitung durch Asset compute-Applikationen müssen Sie diese Grenzwerte anpassen, um eine optimale Leistung (groß genug, um binäre Assets zu handhaben) und Effizienz (keine Ressourcenverschwendung aufgrund ungenutzten Containerspeichers) zu erzielen.
+Aufgrund der umfangreichen Verarbeitung, die von Asset Compute-Anwendungen durchgeführt wird, müssen Sie diese Beschränkungen anpassen, um eine optimale Leistung (groß genug für binäre Assets) und Effizienz (keine Ressourcenverschwendung durch ungenutzten Container-Speicherplatz) zu erzielen.
 
-Der Standard-Timeout für Aktionen in Runtime ist eine Minute, kann jedoch durch Setzen der `timeout`-Beschränkung (in Millisekunden) erhöht werden. Wenn Sie mit der Verarbeitung größerer Dateien rechnen, erhöhen Sie diese Zeit. Betrachten Sie die Gesamtzeit, die zum Herunterladen der Quelle, zum Verarbeiten der Datei und zum Hochladen der Ausgabedarstellung erforderlich ist. Wenn bei einer Aktion eine Zeitüberschreitung auftritt, d. h. sie die Aktivierung nicht vor dem angegebenen Timeout-Limit zurückgibt, verwirft Runtime den Container und verwendet ihn nicht erneut.
+Der Standard-Timeout für Aktionen in Runtime ist eine Minute, kann jedoch durch Setzen der `timeout`-Beschränkung (in Millisekunden) erhöht werden. Wenn Sie mit der Verarbeitung größerer Dateien rechnen, erhöhen Sie diese Zeit. Berücksichtigen Sie die Gesamtzeit, die zum Herunterladen der Quelle, zum Verarbeiten der Datei und zum Hochladen der Ausgabedarstellung erforderlich ist. Bei Zeitüberschreitung einer Aktion, wenn also die Aktivierung nicht vor der angegebenen Timeout-Beschränkung zurückgegeben wird, verwirft Runtime den Container und verwendet ihn nicht erneut.
 
-Asset compute-Anwendungen sind von Natur aus eher an Netzwerk- und Datenträger-Eingabe oder -Ausgabe gebunden. Die Quelldatei muss zuerst heruntergeladen werden. Die Verarbeitung ist häufig ressourcenintensiv und die resultierenden Ausgabedarstellungen werden dann erneut hochgeladen.
+Asset Compute-Anwendungen sind von Natur aus eher an Netzwerk- und Datenträger-E/A-Vorgänge gebunden. Die Quelldatei muss zuerst heruntergeladen werden. Die Verarbeitung ist häufig ressourcenintensiv und die resultierenden Ausgabedarstellungen werden dann erneut hochgeladen.
 
-Sie können den einem Aktionscontainer zugewiesenen Speicher in Megabyte mithilfe der `memorySize` -Parameter. Aktuell definiert dieser Parameter auch, wie viel CPU-Zugriff der Container erhält, und vor allem ist er ein Schlüsselelement der Kosten für die Verwendung von Runtime (größere Container kosten mehr). Verwenden Sie hier einen größeren Wert, wenn Ihre Verarbeitung mehr Speicher oder CPU erfordert, achten Sie jedoch darauf, keine Ressourcen zu verschwenden, da der Gesamtdurchsatz umso geringer ist, je größer die Container sind.
+Mit dem Parameter `memorySize` können Sie den einem Aktions-Container zugewiesenen Speicher in Megabyte festlegen. Derzeit wird mit diesem Parameter auch definiert, inwieweit der Container CPU-Zugriff erhält. Vor allem ist dies aber ein wichtiger Kostenfaktor bei der Verwendung von Runtime (größere Container kosten mehr). Verwenden Sie hier einen größeren Wert, wenn die Verarbeitung mehr Speicher oder CPU erfordert. Achten Sie aber darauf, keine Ressourcen zu verschwenden, denn je größer der Container, desto geringer der Gesamtdurchsatz.
 
-Darüber hinaus ist es möglich, die Parallelität von Aktionen innerhalb eines Containers mithilfe der Einstellung `concurrency` zu steuern. Diese Einstellung ist die Anzahl der gleichzeitigen Aktivierungen, die ein einzelner Container (mit derselben Aktion) erhält. In diesem Modell ähnelt der Aktions-Container einem Node.js-Server, der bis zu diesem Grenzwert mehrere gleichzeitige Anfragen empfängt. Die Standardeinstellung `memorySize` in der Laufzeit auf 200 MB eingestellt ist, ideal für kleinere App Builder-Aktionen. Bei Asset compute-Applikationen kann dieser Standardwert aufgrund der schwereren lokalen Verarbeitung und Festplattenauslastung übermäßig sein. Einige Programme funktionieren je nach Implementierung möglicherweise auch bei gleichzeitigen Aktivitäten nicht gut. Das Asset compute SDK stellt sicher, dass Aktivierungen durch das Schreiben von Dateien in verschiedene eindeutige Ordner getrennt werden.
+Darüber hinaus ist es möglich, die Parallelität von Aktionen innerhalb eines Containers mithilfe der Einstellung `concurrency` zu steuern. Diese Einstellung entspricht der Anzahl der gleichzeitigen Aktivierungen, die ein einzelner Container (derselben Aktion) erhält. In diesem Modell ähnelt der Aktions-Container einem Node.js-Server, der bis zu diesem Grenzwert mehrere gleichzeitige Anfragen empfängt. Die Standardeinstellung `memorySize` in Runtime ist auf 200 MB eingestellt. Dieser Wert ist ideal für kleinere App Builder-Aktionen. Bei Asset Compute-Anwendungen kann dieser Standardwert aufgrund der stärkeren lokalen Verarbeitung und Festplattenauslastung zu hoch sein. Einige Programme funktionieren je nach Implementierung möglicherweise auch bei gleichzeitigen Aktivitäten nicht gut. Das Asset Compute-SDK stellt sicher, dass Aktivierungen getrennt werden, indem Dateien in verschiedene eindeutige Ordner geschrieben werden.
 
 Testen Sie die Programme, um die optimalen Werte für `concurrency` und `memorySize` zu finden. Größere Container (= höhere Speicherbeschränkung) könnten mehr Parallelität ermöglichen, aber bei geringerem Traffic zu unnötigen Ausgaben führen.

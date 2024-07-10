@@ -1,13 +1,13 @@
 ---
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '68'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 # Dokumentation zu Adobe Asset Compute Service
 
-Dieses Repository der Dokumentation ist für [!DNL Adobe Asset Compute Service].
+Dieses Dokumentations-Repository ist für [!DNL Adobe Asset Compute Service] bestimmt.
 
 Ihre Beiträge zur Dokumentation sind willkommen. Sehen Sie sich die folgenden Ressourcen an:
 

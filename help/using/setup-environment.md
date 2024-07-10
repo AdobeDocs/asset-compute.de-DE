@@ -3,9 +3,9 @@ title: Legen Sie die erforderliche Entwicklungsumgebung für  [!DNL Asset Comput
 description: Einrichten einer Entwicklungsumgebung für [!DNL Asset Compute Service] , um benutzerdefinierten Code zu erstellen und zu testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung f
 
    * [Git](https://git-scm.com/)
    * [Docker Desktop](https://www.docker.com/get-started)
-   * [NodeJS](https://nodejs.org) (v14 LTS, ungerade Versionen werden nicht empfohlen) und [NPM](https://www.npmjs.com). Benutzer von OS X HomeBrew können `brew install node` um beide zu installieren. Andernfalls laden Sie das Tool von der [NodeJS-Download-Seite](https://nodejs.org/de/) herunter
-   * Eine IDE, die für NodeJS geeignet ist, empfiehlt Adobe [Visual Studio Code (VS Code)](https://code.visualstudio.com) da dies die unterstützte IDE für den Debugger ist. Sie können jede andere IDE als Code-Editor verwenden, die erweiterte Verwendung (z. B. Debugger) wird jedoch noch nicht unterstützt
-   * Installieren Sie die neueste Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) (`aio`)
+   * [NodeJS](https://nodejs.org) (v14 LTS, ungerade Versionen werden nicht empfohlen) und [NPM](https://www.npmjs.com). OSX HomeBrew-Benutzende können `brew install node` ausführen, um beides zu installieren. Andernfalls laden Sie das Tool von der [NodeJS-Download-Seite](https://nodejs.org/de/) herunter
+   * Als IDE, die für NodeJS geeignet ist, empfiehlt Adobe [Visual Studio Code (VS Code)](https://code.visualstudio.com), da dies die unterstützte IDE für den Debugger ist. Sie können jede andere IDE als Code-Editor verwenden, eine erweiterte Verwendung (z. B. Debugger) wird jedoch noch nicht unterstützt.
+   * Installieren Sie die neueste Version von Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) (`aio`)
    <!-- - install using `npm install -g @adobe/aio-cli@7.1.0` -->
 
 1. Stellen Sie sicher, dass Sie die [Voraussetzungen](/help/using/understand-extensibility.md#prerequisites-and-provisioning) erfüllen
@@ -36,9 +36,9 @@ Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung f
 
 ## Einrichten eines App Builder-Projekts {#create-App-Builder-project}
 
-1. Stellen Sie sicher, dass im [!DNL Experience Cloud] Organisation. Ein Systemadministrator im [Admin Console](https://adminconsole.adobe.com/overview), richtet diese Rolle ein.
+1. Stellen Sie sicher, dass in der [!DNL Experience Cloud]-Organisation eine Systemadmin- oder Entwicklerrolle vorhanden ist. Diese Rolle wird von Systemadmins in [Admin Console](https://adminconsole.adobe.com/overview) eingerichtet.
 
-1. Melden Sie sich bei der [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) an. [!DNL Experience Cloud]Stellen Sie sicher, dass Sie Teil derselben Organisation sind wie die [!DNL Experience Manager] as a [!DNL Cloud Service]-Integration. Weitere Informationen zu Adobe Developer Console finden Sie unter [Konsolendokumentation](https://developer.adobe.com/developer-console/docs/guides/).
+1. Melden Sie sich bei der [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) an. [!DNL Experience Cloud]Stellen Sie sicher, dass Sie Teil derselben Organisation sind wie die [!DNL Experience Manager] as a [!DNL Cloud Service]-Integration. Weitere Informationen zu Adobe Developer Console finden Sie in der [Dokumentation zur Konsole](https://developer.adobe.com/developer-console/docs/guides/).
 
 1. [Erstellen eines App Builder-Projekts](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Klicken Sie auf **[!UICONTROL Neues Projekt erstellen]** > **[!UICONTROL Projekt aus Vorlage]**. Wählen Sie App Builder aus. Ein neues App Builder-Projekt mit zwei Arbeitsbereichen wird erstellt: `Production` und `Stage`. Fügen Sie bei Bedarf zusätzliche Arbeitsbereiche hinzu, z. B. `Development`.
 
@@ -46,7 +46,7 @@ Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung f
 
 ## Nächster Schritt {#next-step}
 
-Wenn Ihre Umgebung eingerichtet ist, können Sie [Erstellen eines benutzerdefinierten Programms](develop-custom-application.md).
+Nachdem Sie Ihre Umgebung eingerichtet haben, können Sie [eine benutzerdefinierte Anwendung erstellen](develop-custom-application.md).
 
 <!-- More ideas:
  
