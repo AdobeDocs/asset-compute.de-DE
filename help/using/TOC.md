@@ -9,7 +9,7 @@ user-guide-title: Handbuch zu Asset Compute Service
 user-guide-description: In dieser Dokumentation werden Aufgaben, wie z. B. die Entwicklung, Verwaltung, Bereitstellung und Fehlerbehebung von benutzerdefiniertem Code, in  [!DNL Asset Compute Service]  behandelt.
 breadcrumb-title: Handbuch zu Asset Compute Service
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 100%
 
