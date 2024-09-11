@@ -2,10 +2,10 @@
 title: Legen Sie die erforderliche Entwicklungsumgebung für  [!DNL Asset Compute Service] fest
 description: Einrichten einer Entwicklungsumgebung für [!DNL Asset Compute Service] , um benutzerdefinierten Code zu erstellen und zu testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 100%
+source-wordcount: '359'
+ht-degree: 90%
 
 ---
 
@@ -43,6 +43,10 @@ Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung f
 1. [Erstellen eines App Builder-Projekts](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Klicken Sie auf **[!UICONTROL Neues Projekt erstellen]** > **[!UICONTROL Projekt aus Vorlage]**. Wählen Sie App Builder aus. Ein neues App Builder-Projekt mit zwei Arbeitsbereichen wird erstellt: `Production` und `Stage`. Fügen Sie bei Bedarf zusätzliche Arbeitsbereiche hinzu, z. B. `Development`.
 
 1. Wählen Sie im App Builder-Projekt einen Arbeitsbereich aus und abonnieren Sie die Services, die für Asset Compute erforderlich sind. Klicken Sie auf **Add to Project** > **API** und fügen Sie die Services `Asset Compute`, `IO Events` und `IO Events Management` hinzu. Beim Hinzufügen der ersten API werden Sie aufgefordert, einen privaten Schlüssel zu erstellen. Speichern Sie diese Informationen auf Ihrem Computer, da Sie diesen Schlüssel zum Testen Ihrer benutzerdefinierten Programme mit dem Entwickler-Tool benötigen.
+
+   >[!NOTE]
+   >
+   >JWT ist veraltet und der private Schlüssel kann nicht heruntergeladen werden. Beachten Sie bei der Aktualisierung der Testwerkzeuge, dass mit OAuth erstellte benutzerdefinierte Mitarbeiter zwar bereitgestellt werden können, Entwicklungstools jedoch nicht funktionieren.
 
 ## Nächster Schritt {#next-step}
 
