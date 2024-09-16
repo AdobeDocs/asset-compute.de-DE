@@ -3,9 +3,9 @@ title: Entwickeln für  [!DNL Asset Compute Service]
 description: Erstellen Sie benutzerdefinierte Programme mit  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1542'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -99,7 +99,7 @@ Fügen Sie die nachfolgenden Anmeldeinformationen für das Entwicklungs-Tool in 
 
    >[!NOTE]
    >
-   >JWT ist veraltet und der private Schlüssel kann nicht heruntergeladen werden. Beachten Sie bei der Aktualisierung der Testwerkzeuge, dass mit OAuth erstellte benutzerdefinierte Mitarbeiter zwar bereitgestellt werden können, Entwicklungstools jedoch nicht funktionieren.
+   >JWT ist veraltet und der private Schlüssel kann nicht heruntergeladen werden. Während wir an einer Aktualisierung der Test-Tools arbeiten, können zwar mit OAuth erstellte benutzerdefinierte Worker bereitgestellt werden, Entwicklungs-Tools funktionieren jedoch nicht.
 
 1. Laden Sie die Datei über die Adobe Developer Console herunter. Gehen Sie zum Stammverzeichnis des Projekts und klicken Sie in der rechten oberen Ecke auf „Alle herunterladen“. Die Datei wird mit `<namespace>-<workspace>.json` als Dateiname heruntergeladen. Führen Sie einen der folgenden Schritte aus:
 

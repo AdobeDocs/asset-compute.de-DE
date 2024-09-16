@@ -3,9 +3,9 @@ title: Legen Sie die erforderliche Entwicklungsumgebung für  [!DNL Asset Comput
 description: Einrichten einer Entwicklungsumgebung für [!DNL Asset Compute Service] , um benutzerdefinierten Code zu erstellen und zu testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
 source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '359'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung f
 
    >[!NOTE]
    >
-   >JWT ist veraltet und der private Schlüssel kann nicht heruntergeladen werden. Beachten Sie bei der Aktualisierung der Testwerkzeuge, dass mit OAuth erstellte benutzerdefinierte Mitarbeiter zwar bereitgestellt werden können, Entwicklungstools jedoch nicht funktionieren.
+   >JWT ist veraltet und der private Schlüssel kann nicht heruntergeladen werden. Während wir an einer Aktualisierung der Test-Tools arbeiten, können zwar mit OAuth erstellte benutzerdefinierte Worker bereitgestellt werden, Entwicklungs-Tools funktionieren jedoch nicht.
 
 ## Nächster Schritt {#next-step}
 
