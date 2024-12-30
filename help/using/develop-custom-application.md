@@ -3,7 +3,7 @@ title: Entwickeln für  [!DNL Asset Compute Service]
 description: Erstellen Sie benutzerdefinierte Programme mit  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 100%
 
