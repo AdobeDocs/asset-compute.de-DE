@@ -31,7 +31,7 @@ Ausnahmen von dieser Regel sind die Versionshinweise, in denen bekannte Probleme
 
 Alle Ideen, die Sie möglicherweise zur Verbesserung der Dokumentation haben, sind als Beiträge willkommen. Kommentare, Probleme und Pull-Anfragen sind jedoch nur für *Beiträge* vorgesehen. Sie dienen nicht der Beantwortung Ihrer Fragen zur Verwendung des Produkts, Implementierung von Projekten oder Lösung technischer Probleme.
 
-Fragen zur Verwendung oder zu technischen Fehlern, die möglicherweise bei Ihnen auftreten, sollten entsprechend dem herkömmlichen Support-Vorgang über das [[!DNL Experience Manager] -Enterprise-Support-Portal](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=de#home) eingereicht oder in der [[!DNL Experience Manager] -Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?lang=de) diskutiert werden.
+Fragen zur Verwendung oder zu technischen Fehlern, die möglicherweise bei Ihnen auftreten, sollten entsprechend dem herkömmlichen Support-Vorgang über das [[!DNL Experience Manager] -Enterprise-Support-Portal](https://experienceleague.adobe.com/de?support-solution=Experience+Manager&amp;lang=de#home) eingereicht oder in der [[!DNL Experience Manager] -Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=de&lang=de) diskutiert werden.
 
 ***Dokumentationsbeiträge sind kein Ersatz für die Adobe-Kundenunterstützung***, und Beiträge, die Antworten auf Support-bezogene Fragen suchen, werden abgelehnt.
 
