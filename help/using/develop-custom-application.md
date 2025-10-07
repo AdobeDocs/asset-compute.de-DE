@@ -2,9 +2,9 @@
 title: Entwickeln für  [!DNL Asset Compute Service]
 description: Erstellen Sie benutzerdefinierte Programme mit  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
-workflow-type: tm+mt
-source-wordcount: '1542'
+source-git-commit: 94fd8c0888185f64825046b7999655e9501a71fe
+workflow-type: ht
+source-wordcount: '1489'
 ht-degree: 100%
 
 ---
@@ -90,17 +90,17 @@ Stellen Sie sicher, dass Sie Zugriff auf einen [unterstützten Cloud-Speicher-Co
 #### Hinzufügen von Anmeldeinformationen zur ENV-Datei {#add-credentials-env-file}
 
 Fügen Sie die nachfolgenden Anmeldeinformationen für das Entwicklungs-Tool in die `.env`-Datei ein. Die Datei befindet sich im Stammverzeichnis des App Builder-Projekts:
+<!--
+1. Add the absolute path to the private key file created while adding services to your App Builder Project:
 
-1. So fügen Sie den absoluten Pfad zu der privaten Schlüsseldatei hinzu, die beim Hinzufügen von Services zu Ihrem App Builder-Projekt erstellt wurde:
-
-   ```conf
-   ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
-   ```
+    ```conf
+    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
+    ```
 
    >[!NOTE]
    >
-   >JWT ist veraltet und der private Schlüssel kann nicht heruntergeladen werden. Während wir an einer Aktualisierung der Test-Tools arbeiten, können zwar mit OAuth erstellte benutzerdefinierte Worker bereitgestellt werden, Entwicklungs-Tools funktionieren jedoch nicht.
-
+   >JWT is deprecated and Private Key is not available for download. While we are working on updating the testing tools, note that custom workers created using OAuth can be deployed but devtools would not work.
+-->
 1. Laden Sie die Datei über die Adobe Developer Console herunter. Gehen Sie zum Stammverzeichnis des Projekts und klicken Sie in der rechten oberen Ecke auf „Alle herunterladen“. Die Datei wird mit `<namespace>-<workspace>.json` als Dateiname heruntergeladen. Führen Sie einen der folgenden Schritte aus:
 
    * Benennen Sie die Datei in `console.json` um und verschieben Sie sie in den Stammordner Ihres Projekts.
