@@ -2,10 +2,10 @@
 title: Testen und Debuggen von benutzerdefinierten  [!DNL Asset Compute Service] -Programmen
 description: Testen und Debuggen von benutzerdefinierten  [!DNL Asset Compute Service] -Programmen.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: f199cecfe4409e2370b30783f984062196dd807d
 workflow-type: tm+mt
 source-wordcount: '775'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -164,7 +164,7 @@ Sehen Sie sich dazu die vollständige Liste und Beschreibung der [Asset Compute-
 
 Die folgenden Schritte zeigen, wie Sie Ihr benutzerdefiniertes Programm mit Visual Studio Code debuggen können. Er ermöglicht die Anzeige von Live-Protokollen, das Auffinden von Haltepunkten und das Durchlaufen des Codes sowie das Live-Neuladen lokaler Code-Änderungen bei jeder Aktivierung.
 
-Mit `aio` werden viele dieser Schritte standardmäßig automatisiert. Navigieren Sie zum Abschnitt „Debuggen der Anwendung“ in der [Adobe Developer App Builder-Dokumentation](https://developer.adobe.com/app-builder/docs/getting_started/first_app). Die folgenden Schritte beinhalten vorerst eine Problemumgehung.
+Mit `aio` werden viele dieser Schritte standardmäßig automatisiert. Navigieren Sie zum Abschnitt „Debuggen der Anwendung“ in der [Adobe Developer App Builder-Dokumentation](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#). Die folgenden Schritte beinhalten vorerst eine Problemumgehung.
 
 1. Installieren Sie die neuste Version von [wskdebug](https://github.com/apache/openwhisk-wskdebug) und optional [ngrok](https://www.npmjs.com/package/ngrok) von GitHub.
 
@@ -200,7 +200,7 @@ Mit `aio` werden viele dieser Schritte standardmäßig automatisiert. Navigieren
 
    Rufen Sie den `ACTION NAME` aus der Ausgabe von `aio app deploy` ab.
 
-1. Wählen Sie `wskdebug worker` in der Ausführungs-/Debug-Konfiguration aus und klicken Sie auf das Wiedergabesymbol. Warten Sie auf den Start, bis die Meldung **[!UICONTROL Ready for activations]** (Bereit für Aktivierungen) im Fenster der **[!UICONTROL Debugging-Konsole]** angezeigt wird.
+1. Wählen Sie `wskdebug worker` aus der Run/Debug-Konfiguration aus und klicken Sie auf das Wiedergabesymbol. Warten Sie auf den Start, bis die Meldung **[!UICONTROL Ready for activations]** (Bereit für Aktivierungen) im Fenster der **[!UICONTROL Debugging-Konsole]** angezeigt wird.
 
 1. Klicken Sie im Entwickler-Tool auf **[!UICONTROL Run]**. Sie können die im Visual Studio Code-Editor ausgeführten Aktionen sehen und die Protokolle werden angezeigt.
 

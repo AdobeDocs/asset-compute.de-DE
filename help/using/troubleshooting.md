@@ -2,10 +2,10 @@
 title: Fehlerbehebung [!DNL Asset Compute Service]
 description: Fehlerbehebung und Debugging von benutzerdefinierten Programmen mit  [!DNL Asset Compute Service].
 exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -22,7 +22,7 @@ Einige allgemeine Tipps, die Ihnen bei der Fehlerbehebung mit Asset Compute Serv
 
 ## Probleme beim Anmelden über Adobe [!DNL aio-cli] {#login-via-aio-cli}
 
-Wenn Sie Probleme haben, sich über Adobe [!DNL aio-cli]](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) bei [!DNL Adobe Developer Console] [anzumelden, fügen Sie manuell die Anmeldeinformationen hinzu, die zum Entwickeln, Testen und Bereitstellen Ihrer benutzerdefinierten Anwendung erforderlich sind:
+Wenn Sie Probleme haben, sich über Adobe [!DNL aio-cli]](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli) bei [!DNL Adobe Developer Console] [anzumelden, fügen Sie manuell die Anmeldeinformationen hinzu, die zum Entwickeln, Testen und Bereitstellen Ihrer benutzerdefinierten Anwendung erforderlich sind:
 
 1. Navigieren Sie zu Ihrem Adobe Developer App-Builder-Projekt und -Arbeitsbereich in der [Adobe-Entwicklerkonsole](https://developer.adobe.com/console/user/servicesandapis) und klicken Sie oben rechts auf **[!UICONTROL Herunterladen]**. Öffnen Sie diese Datei und speichern Sie diese JSON an einem sicheren Ort auf Ihrem Computer.
 

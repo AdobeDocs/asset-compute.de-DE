@@ -2,10 +2,10 @@
 title: Architektur von  [!DNL Asset Compute Service]
 description: So arbeiten [!DNL Asset Compute Service] -API, Programme und SDK zusammen, um einen Cloud-nativen Asset-Verarbeitungs-Service bereitzustellen.
 exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
-source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
+source-git-commit: f199cecfe4409e2370b30783f984062196dd807d
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 100%
 
 [!DNL Asset Compute Service] kann erweitert werden, indem benutzerdefinierte Programme basierend auf [!DNL Adobe Developer App Builder] erstellt werden. Diese benutzerdefinierten Programme sind Headless-[!DNL Project Adobe Developer App Builder]-Apps und führen Aufgaben wie das Hinzufügen benutzerdefinierter Konvertierungs-Tools oder den Aufruf externer APIs durch, um Bildvorgänge auszuführen.
 
-[!DNL Project Adobe Developer App Builder] ist ein Framework zum Erstellen und Bereitstellen benutzerdefinierter Web-Anwendungen auf Adobe [!DNL `I/O Runtime`]. Um benutzerdefinierte Anwendungen zu kreieren, können die Entwickelnden [!DNL React Spectrum] (das Adobe-Toolkit für Benutzeroberflächen) nutzen, Microservices erstellen, benutzerdefinierte Ereignisse erzeugen und APIs orchestrieren. Siehe [Dokumentation zu Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
+[!DNL Project Adobe Developer App Builder] ist ein Framework zum Erstellen und Bereitstellen benutzerdefinierter Web-Anwendungen auf Adobe [!DNL `I/O Runtime`]. Um benutzerdefinierte Anwendungen zu kreieren, können die Entwickelnden [!DNL React Spectrum] (das Adobe-Toolkit für Benutzeroberflächen) nutzen, Microservices erstellen, benutzerdefinierte Ereignisse erzeugen und APIs orchestrieren. Siehe [Dokumentation zu Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 
 Die Architektur basiert auf dem Folgenden:
 
 * Die Modularität der Anwendungen – sie enthalten nur das, was für eine bestimmte Aufgabe benötigt wird – ermöglicht es, die Anwendungen voneinander zu entkoppeln und diese einfach zu halten.
 
-* Das Server-lose Konzept von [!DNL Adobe I/O] Runtime bietet zahlreiche Vorteile: asynchrone, hochskalierbare, isolierte, vorgangsbasierte Verarbeitung, die sich ideal für die Asset-Verarbeitung eignet.
+* Das Server-lose Konzept von [!DNL Adobe I/O] Runtime bietet zahlreiche Vorteile: asynchrone, hochskalierbare, isolierte, auftragsbasierte Verarbeitung, die sich ideal für die Asset-Verarbeitung eignet.
 
 * Der binäre Cloud-Speicher bietet die erforderlichen Funktionen zum individuellen Speichern von und Zugreifen auf Asset-Dateien und -Ausgabedarstellungen, ohne dass volle Zugriffsberechtigungen auf den Speicher erforderlich sind, und zwar unter Verwendung von vorab signierten URL-Referenzen. Übertragungsbeschleunigung, CDN-Caching und die gemeinsame Speicherung von Compute-Programme im Cloud-Speicher ermöglichen einen optimalen Zugriff auf Inhalte mit geringer Latenz. Es werden sowohl AWS- als auch Azure-Clouds unterstützt.
 

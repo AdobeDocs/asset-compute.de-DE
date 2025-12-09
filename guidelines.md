@@ -1,8 +1,8 @@
 ---
-source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
+source-git-commit: f199cecfe4409e2370b30783f984062196dd807d
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 100%
+source-wordcount: '587'
+ht-degree: 91%
 
 ---
 # Richtlinien für Beiträge zur Dokumentation
@@ -13,7 +13,7 @@ Wir wissen, dass die Benutzenden in extrem wettbewerbsorientierten Umgebungen ar
 
 Das Ziel besteht darin, die Benutzenden schnellstmöglich mit der Dokumentation vertraut zu machen. Daher steht bei Adobe eine genaue und nutzbare Dokumentation im Vordergrund, mit dem Bemühen, die Dokumentation fortlaufend zu aktualisieren und zu verbessern.
 
-## Beiträge zur Dokumentation
+## Dokumentationsbeiträge
 
 Zur stetigen Verbesserung der Dokumentation ist die gesamte Benutzer-Community eingeladen, zur Dokumentation beizutragen. Sei es durch Pull-Anfragen oder Probleme, bei den Verbesserungen der Dokumentation kann es sich um Korrekturen, Klarstellungen, Erweiterungen und weitere Beispiele handeln.
 
@@ -31,11 +31,11 @@ Ausnahmen von dieser Regel sind die Versionshinweise, in denen bekannte Probleme
 
 Alle Ideen, die Sie möglicherweise zur Verbesserung der Dokumentation haben, sind als Beiträge willkommen. Kommentare, Probleme und Pull-Anfragen sind jedoch nur für *Beiträge* vorgesehen. Sie dienen nicht der Beantwortung Ihrer Fragen zur Verwendung des Produkts, Implementierung von Projekten oder Lösung technischer Probleme.
 
-Fragen zur Verwendung oder zu technischen Fehlern, die möglicherweise bei Ihnen auftreten, sollten entsprechend dem herkömmlichen Support-Vorgang über das [[!DNL Experience Manager] -Enterprise-Support-Portal](https://experienceleague.adobe.com/de?support-solution=Experience+Manager&amp;lang=de#home) eingereicht oder in der [[!DNL Experience Manager] -Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=de&lang=de) diskutiert werden.
+Fragen zur Verwendung oder zu technischen Fehlern, die möglicherweise bei Ihnen auftreten, sollten entsprechend dem herkömmlichen Support-Vorgang über das [[!DNL Experience Manager] Support-Portal](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=de#home) oder in der [[!DNL Experience Manager] Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?lang=de) gemeldet werden.
 
 ***Dokumentationsbeiträge sind kein Ersatz für die Adobe-Kundenunterstützung***, und Beiträge, die Antworten auf Support-bezogene Fragen suchen, werden abgelehnt.
 
-### Die Beiträge müssen sich eindeutig auf die betroffenen Dokumentationsseiten beziehen.
+### Die Beiträge müssen klar auf die betroffenen Dokumentationsseiten verweisen
 
 Wenn Sie ein Problem erstellen, um Verbesserungen an der Dokumentation vorzuschlagen, müssen Sie Links zu den betroffenen Seiten angeben. Wenn Sie ein Problem erstellen, indem Sie den Link **Bearbeiten dieser Seite** auf einer Dokumentationsseite verwenden, wird das Problem automatisch mit einem Link zu dieser Seite erstellt.
 

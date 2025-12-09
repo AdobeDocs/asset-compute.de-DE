@@ -2,10 +2,10 @@
 title: Entwickeln für  [!DNL Asset Compute Service]
 description: Erstellen Sie benutzerdefinierte Programme mit  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: 94fd8c0888185f64825046b7999655e9501a71fe
+source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
 workflow-type: tm+mt
 source-wordcount: '1489'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -21,11 +21,11 @@ Bevor Sie mit der Entwicklung eines benutzerdefinierten Programms beginnen:
 
 Stellen Sie sicher, dass [Adobe aio-cli](https://github.com/adobe/aio-cli) lokal installiert ist.
 
-1. Um ein benutzerdefiniertes Programm zu erstellen, [erstellen Sie ein App Builder-Projekt](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Führen Sie dazu `aio app init <app-name>` im Terminal aus.
+1. Um ein benutzerdefiniertes Programm zu erstellen, [erstellen Sie ein App Builder-Projekt](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#4-bootstrapping-new-app-using-the-cli). Führen Sie dazu `aio app init <app-name>` im Terminal aus.
 
-   Wenn Sie sich noch nicht angemeldet haben, fordert Sie dieser Befehl in einem Browser auf, sich mit Ihrer Adobe ID bei der [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) anzumelden. Weitere Informationen zum Anmelden von der CLI finden Sie [hier](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli).
+   Wenn Sie sich noch nicht angemeldet haben, fordert Sie dieser Befehl in einem Browser auf, sich mit Ihrer Adobe ID bei der [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) anzumelden. Weitere Informationen zum Anmelden von der CLI finden Sie [hier](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli).
 
-   Adobe empfiehlt, dass Sie sich zuerst anmelden. Sollten Sie Probleme haben, befolgen Sie die Anweisungen zum [Erstellen einer App, ohne sich anzumelden](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe empfiehlt, dass Sie sich zuerst anmelden. Sollten Sie Probleme haben, befolgen Sie die Anweisungen zum [Erstellen einer App, ohne sich anzumelden](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. Befolgen Sie nach dem Anmelden die Anweisungen in der CLI und wählen Sie die Parameter `Organization`, `Project` und `Workspace` für das Programm aus. Wählen Sie das Projekt und den Arbeitsbereich aus, das bzw. den Sie beim [Einrichten der Umgebung](setup-environment.md) erstellt haben. Beantworten Sie die Frage `Which extension point(s) do you wish to implement ?` mit `DX Asset Compute Worker`:
 
@@ -62,7 +62,7 @@ Stellen Sie sicher, dass [Adobe aio-cli](https://github.com/adobe/aio-cli) lokal
 
 1. Befolgen Sie die restlichen Anweisungen und öffnen Sie das neue Programm in Visual Studio Code (oder Ihrem bevorzugten Code-Editor). Sie enthält die Strukturvorlage und den Beispiel-Code für ein benutzerdefiniertes Programm.
 
-   Informationen über die [Hauptkomponenten eines App Builder-Programms](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
+   Informationen über die [Hauptkomponenten eines App Builder-Programms](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#5-anatomy-of-an-app-builder-application).
 
    Die Vorlagenanwendung nutzt das [Asset Compute-SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) von Adobe zum Hochladen, Herunterladen und Orchestrieren von Anwendungsdarstellungen, sodass die Entwickelnden lediglich die benutzerdefinierte Anwendungslogik implementieren müssen. Innerhalb des Ordners `actions/<worker-name>` befindet sich die Datei `index.js`, in der der benutzerdefinierte Programm-Code eingefügt werden kann.
 
@@ -104,7 +104,7 @@ Fügen Sie die nachfolgenden Anmeldeinformationen für das Entwicklungs-Tool in 
 1. Laden Sie die Datei über die Adobe Developer Console herunter. Gehen Sie zum Stammverzeichnis des Projekts und klicken Sie in der rechten oberen Ecke auf „Alle herunterladen“. Die Datei wird mit `<namespace>-<workspace>.json` als Dateiname heruntergeladen. Führen Sie einen der folgenden Schritte aus:
 
    * Benennen Sie die Datei in `console.json` um und verschieben Sie sie in den Stammordner Ihres Projekts.
-   * Optional können Sie den absoluten Pfad der JSON-Datei für die Adobe Developer Console-Integration hinzufügen. Hierbei handelt es sich um dieselbe Datei [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user), die Sie in Ihrem Projektarbeitsbereich heruntergeladen haben.
+   * Optional können Sie den absoluten Pfad der JSON-Datei für die Adobe Developer Console-Integration hinzufügen. Hierbei handelt es sich um dieselbe Datei [`console.json`](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#42-developer-is-not-logged-in-as-enterprise-organization-user), die Sie in Ihrem Projektarbeitsbereich heruntergeladen haben.
 
      ```conf
      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -243,7 +243,7 @@ const orgId = params.auth.orgId; // Experience Cloud Organization
 
 ### Übergeben von Anmeldeinformationen für Drittanbietersysteme {#pass-credentials-for-tp}
 
-Um Anmeldeinformationen für andere externe Services zu verarbeiten, übergeben Sie diese als Standardparameter für die Aktionen. Sie werden bei der Übertragung automatisch verschlüsselt. Weitere Informationen finden Sie unter [„Erstellen von Aktionen“ im Adobe I/O Runtime-Entwicklerhandbuch](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/). Legen Sie sie dann während der Bereitstellung mithilfe von Umgebungsvariablen fest. Auf diese Parameter kann im Objekt `params` innerhalb der Aktion zugegriffen werden.
+Um Anmeldeinformationen für andere externe Services zu verarbeiten, übergeben Sie diese als Standardparameter für die Aktionen. Sie werden bei der Übertragung automatisch verschlüsselt. Weitere Informationen finden Sie unter [„Erstellen von Aktionen“ im Adobe I/O Runtime-Entwicklerhandbuch](https://developer.adobe.com/app-builder/docs/guides/runtime_guides/creating-actions#). Legen Sie sie dann während der Bereitstellung mithilfe von Umgebungsvariablen fest. Auf diese Parameter kann im Objekt `params` innerhalb der Aktion zugegriffen werden.
 
 Legen Sie die Standardparameter in `inputs` in der Datei `manifest.yml` fest:
 
@@ -278,7 +278,7 @@ const key = params.secretKey;
 
 ## Dimensionieren von Programmen {#sizing-workers}
 
-Eine Anwendung wird in einem Container in Adobe [!DNL I/O Runtime] mit [Beschränkungen](https://developer.adobe.com/runtime/docs/guides/using/system_settings/) ausgeführt, die über `manifest.yml` konfiguriert werden können:
+Eine Anwendung wird in einem Container in Adobe [!DNL I/O Runtime] mit [Beschränkungen](https://developer.adobe.com/app-builder/docs/guides/runtime_guides/system-settings#) ausgeführt, die über `manifest.yml` konfiguriert werden können:
 
 ```yaml
     actions:

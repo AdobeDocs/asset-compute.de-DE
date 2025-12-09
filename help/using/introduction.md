@@ -2,10 +2,10 @@
 title: Einführung in  [!DNL Asset Compute Service]
 description: '[!DNL Asset Compute Service] ist ein Cloud-nativer Asset-Verarbeitungs-Service, der die Komplexität reduziert und die Skalierbarkeit verbessert.'
 exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
 workflow-type: tm+mt
 source-wordcount: '278'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Entwickelnde können benutzerdefinierte Asset-Anwendungen (auch als benutzerdefinierte Sekundäranwendungen oder Worker bezeichnet) als Plug-in einbinden, um benutzerdefinierte Anwendungsfälle abzudecken. Der Service funktioniert in Adobe [!DNL I/O Runtime]. Er kann durch Headless-[!DNL Adobe Developer App Builder]-Apps in Node.js erweitert werden. Diese können benutzerdefinierte Vorgänge ausführen, z. B. externe APIs aufrufen, um Bildvorgänge durchzuführen oder [!DNL Adobe Sensei]-Unterstützung zu nutzen.
 
-[!DNL Adobe Developer App Builder] ist ein Framework zum Erstellen und Bereitstellen benutzerdefinierter Web-Anwendungen in Adobe [!DNL I/O Runtime], um Adobe Experience Cloud-Lösungen zu erweitern. Um benutzerdefinierte Anwendungen zu kreieren, können die Entwickelnden [!DNL React Spectrum] (das Adobe-Toolkit für Benutzeroberflächen) nutzen, Microservices erstellen, benutzerdefinierte Ereignisse erzeugen und APIs orchestrieren. Siehe [Dokumentation zu Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview/).
+[!DNL Adobe Developer App Builder] ist ein Framework zum Erstellen und Bereitstellen benutzerdefinierter Web-Anwendungen in Adobe [!DNL I/O Runtime], um Adobe Experience Cloud-Lösungen zu erweitern. Um benutzerdefinierte Anwendungen zu kreieren, können die Entwickelnden [!DNL React Spectrum] (das Adobe-Toolkit für Benutzeroberflächen) nutzen, Microservices erstellen, benutzerdefinierte Ereignisse erzeugen und APIs orchestrieren. Siehe [Dokumentation zu Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Sie können den Webservice [!DNL Asset Compute] verwenden, um Miniaturansichten 
 >[!MORELIKETHIS]
 >
 >* [Übersicht über die Asset-Verarbeitung mit Asset-Microservices in  [!DNL Adobe Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview).
->* [Dokumentation zu Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
+>* [Dokumentation zu Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 >* [Unterstützte Dateiformate für die Verarbeitung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
 <!-- **TBD:**

@@ -2,16 +2,16 @@
 title: '[!DNL Adobe Asset Compute Service]-Benutzerhandbuch'
 description: In dieser Dokumentation werden Aufgaben, wie z. B. die Einführung, Entwicklung, Verwaltung, Bereitstellung und Fehlerbehebung von benutzerdefiniertem Code, in  [!DNL Asset Compute Service]  behandelt.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
 # Info [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] ist ein skalierbarer und erweiterbarer Service von Adobe Experience Cloud zur Verarbeitung digitaler Assets. Sie können Bild-, Video-, Dokument- und andere Dateiformate in verschiedene Ausgabedarstellungen umwandeln, einschließlich Miniaturansichten, extrahiertem Text und Metadaten, Archiven und mehr. Entwickelnde können benutzerdefinierte Anwendungen (auch als benutzerdefinierte Sekundäre oder Worker bezeichnet) als Plug-in einbinden, um benutzerdefinierte Anwendungsfälle abzudecken, die mit [Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview) erstellt und auf der Server-losen [[!DNL I/O Runtime]](https://developer.adobe.com/runtime/)-Plattform ausgeführt werden.
+[!DNL Asset Compute Service] ist ein skalierbarer und erweiterbarer Service von Adobe Experience Cloud zur Verarbeitung digitaler Assets. Sie können Bild-, Video-, Dokument- und andere Dateiformate in verschiedene Ausgabedarstellungen umwandeln, einschließlich Miniaturansichten, extrahiertem Text und Metadaten, Archiven und mehr. Entwickelnde können benutzerdefinierte Anwendungen (auch als benutzerdefinierte Sekundäre oder Worker bezeichnet) als Plug-in einbinden, um benutzerdefinierte Anwendungsfälle abzudecken, die mit [Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#) erstellt und auf der Server-losen [[!DNL I/O Runtime]](https://developer.adobe.com/runtime/)-Plattform ausgeführt werden.
 
 In dieser Dokumentation werden Themen wie z. B. die Entwicklung, Verwaltung, Bereitstellung und Fehlerbehebung von benutzerdefiniertem Code in [!DNL Asset Compute Service] behandelt. Was ein [!DNL Asset Compute Service] ist, erfahren Sie in dieser [Einführung](introduction.md). Sehen Sie zudem sich an, [was der Service für Sie leisten kann](introduction.md#possible-use-cases-benefits).
 

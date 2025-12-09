@@ -2,10 +2,10 @@
 title: Legen Sie die erforderliche Entwicklungsumgebung für  [!DNL Asset Compute Service] fest
 description: Einrichten einer Entwicklungsumgebung für [!DNL Asset Compute Service] , um benutzerdefinierten Code zu erstellen und zu testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
+source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 100%
+source-wordcount: '360'
+ht-degree: 89%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung für [!DNL Asset Compute Service] einzurichten.
 
-1. [Erhalten Sie Zugriff auf und Anmeldeinformationen](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials) für [!DNL Adobe Developer App Builder].
+1. [Erhalten Sie Zugriff auf und Anmeldeinformationen](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#acquire-access-and-credentials) für [!DNL Adobe Developer App Builder].
 
-1. [Richten Sie die lokale Umgebung](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up) und die erforderlichen Tools ein.
+1. [Richten Sie die lokale Umgebung](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#local-environment-set-up) und die erforderlichen Tools ein.
 
 1. Einige weitere Tools, die Ihnen den reibungslosen Einstieg in die Entwicklung erleichtern, sind:
 
@@ -40,13 +40,13 @@ Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung f
 
 1. Melden Sie sich bei der [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) an. [!DNL Experience Cloud]Stellen Sie sicher, dass Sie Teil derselben Organisation sind wie die [!DNL Experience Manager] as a [!DNL Cloud Service]-Integration. Weitere Informationen zu Adobe Developer Console finden Sie in der [Dokumentation zur Konsole](https://developer.adobe.com/developer-console/docs/guides/).
 
-1. [Erstellen eines App Builder-Projekts](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Klicken Sie auf **[!UICONTROL Neues Projekt erstellen]** > **[!UICONTROL Projekt aus Vorlage]**. Wählen Sie App Builder aus. Ein neues App Builder-Projekt mit zwei Arbeitsbereichen wird erstellt: `Production` und `Stage`. Fügen Sie bei Bedarf zusätzliche Arbeitsbereiche hinzu, z. B. `Development`.
+1. [Erstellen eines App Builder-Projekts](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#). Klicken Sie auf **[!UICONTROL Neues Projekt erstellen]** > **[!UICONTROL Projekt aus Vorlage]**. Wählen Sie App Builder aus. Ein neues App Builder-Projekt mit zwei Arbeitsbereichen wird erstellt: `Production` und `Stage`. Fügen Sie bei Bedarf zusätzliche Arbeitsbereiche hinzu, z. B. `Development`.
 
 1. Wählen Sie im App Builder-Projekt einen Arbeitsbereich aus und abonnieren Sie die Services, die für Asset Compute erforderlich sind. Klicken Sie auf **Add to Project** > **API** und fügen Sie die Services `Asset Compute`, `IO Events` und `IO Events Management` hinzu. Beim Hinzufügen der ersten API werden Sie aufgefordert, einen privaten Schlüssel zu erstellen. Speichern Sie diese Informationen auf Ihrem Computer, da Sie diesen Schlüssel zum Testen Ihrer benutzerdefinierten Programme mit dem Entwickler-Tool benötigen.
 
    >[!NOTE]
    >
-   >JWT ist veraltet und der private Schlüssel kann nicht heruntergeladen werden. Während wir an einer Aktualisierung der Test-Tools arbeiten, können zwar mit OAuth erstellte benutzerdefinierte Worker bereitgestellt werden, Entwicklungs-Tools funktionieren jedoch nicht.
+   >JWT ist veraltet und der private Schlüssel steht nicht mehr zum Download zur Verfügung. Während Adobe an der Aktualisierung der Test-Tools arbeitet, sollten Sie beachten, dass benutzerdefinierte Sekundäre, die mit OAuth erstellt wurden, bereitgestellt werden können, DevTools jedoch nicht funktionieren würden.
 
 ## Nächster Schritt {#next-step}
 

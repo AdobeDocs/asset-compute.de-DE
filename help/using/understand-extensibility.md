@@ -2,10 +2,10 @@
 title: Lernen Sie, wie Sie  [!DNL Asset Compute Service] erweitern
 description: Wann und wie die Funktionalität von [!DNL Asset Compute Service] für die Verarbeitung benutzerdefinierter Assets erweitert wird.
 exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
 workflow-type: tm+mt
 source-wordcount: '229'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -24,9 +24,9 @@ Bei den benutzerdefinierten Programmen handelt es sich um Headless-Apps von [Ado
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 * Die Adobe Developer App Builder-Tools sind auf Ihrem Gerät installiert.
-* Eine [!DNL Experience Cloud]-Organisation. Weitere Informationen finden Sie unter [Starten Ihrer App Builder-Journey](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials).
+* Eine [!DNL Experience Cloud]-Organisation. Weitere Informationen finden Sie unter [Starten Ihrer App Builder-Journey](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#acquire-access-and-credentials).
 * [!DNL Experience Manager] as a [!DNL Cloud Service] muss für die Experience Cloud-Organisation aktiviert sein.
-* Die [!DNL Adobe Experience Cloud]-Organisation ist Teil des [!DNL Adobe Developer App Builder]-Sneak-Peek-Programms für Entwickelnde. Erfahren Sie, [wie Sie den Zugriff beantragen](https://developer.adobe.com/app-builder/docs/overview/getting_access).
+* Die [!DNL Adobe Experience Cloud]-Organisation ist Teil des [!DNL Adobe Developer App Builder]-Sneak-Peek-Programms für Entwickelnde. Erfahren Sie, [wie Sie den Zugriff beantragen](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/set-up#access-and-credentials).
 * Stellen Sie für die Entwickelnden eine Entwicklerrolle oder Administratorberechtigungen in der Organisation sicher.
 * Stellen Sie sicher, dass Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) lokal installiert ist.
 
