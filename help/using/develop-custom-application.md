@@ -2,10 +2,10 @@
 title: Entwickeln für  [!DNL Asset Compute Service]
 description: Erstellen Sie benutzerdefinierte Programme mit  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
+source-git-commit: aed361a577fc53caec4118e417b1c0c814617b51
 workflow-type: tm+mt
-source-wordcount: '1489'
-ht-degree: 99%
+source-wordcount: '1722'
+ht-degree: 93%
 
 ---
 
@@ -72,7 +72,8 @@ Beispiele und Ideen für benutzerdefinierte Programme finden Sie unter [Beispiel
 
 Bei der Anmeldung während der Erstellung des Programms werden die meisten Anmeldeinformationen von App Builder in Ihrer ENV-Datei gesammelt. Die Verwendung des Entwickler-Tools erfordert jedoch zusätzliche Anmeldeinformationen.
 
-<!-- TBD: Check if manual setup of credentials is required.
+<!-- 
+TBD: Check if manual setup of credentials is required.
 Manual set up of credentials is removed from troubleshooting and best practices page. Link was broken.
 If you did not log in, refer to our troubleshooting guide to [set up credentials manually](troubleshooting.md).
 -->
@@ -154,8 +155,8 @@ Weitere Informationen zum Testen und Debuggen Ihres Programms finden Sie [hier](
 
 Im Folgenden finden Sie Beispiele für benutzerdefinierte Programme:
 
-* [worker-basic](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic)
-* [worker-animal-pictures](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-animal-pictures)
+* [arbeitnehmerbasiert](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic)
+* [Worker-Animal-Pictures](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-animal-pictures)
 
 ### Benutzerdefiniertes Vorlagenprogramm {#template-custom-application}
 
@@ -191,7 +192,8 @@ exports.main = worker(async function (source, rendition) {
 
 Beispielsweise sendet [`worker-animal-pictures`](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/worker-animal-pictures.js#L46) mithilfe der Bibliothek [`node-httptransfer`](https://github.com/adobe/node-httptransfer#node-httptransfer) eine Abrufanfrage an eine statische URL von Wikimedia.
 
-<!-- TBD: Revisit later to see if this note is required.
+<!-- 
+TBD: Revisit later to see if this note is required.
 >[!NOTE]
 >
 >For extra authorization for these API calls, see [custom authorization checks](#custom-authorization-checks).
@@ -230,7 +232,8 @@ Standardmäßig werden benutzerdefinierte Asset Compute-Anwendungen mit Autorisi
 
 ### Zugriff auf andere Adobe-APIs {#access-adobe-apis}
 
-<!-- TBD: Revisit this section. Where do we document console workspace creation?
+<!-- 
+TBD: Revisit this section. Where do we document console workspace creation?
 -->
 
 Fügen Sie die API-Services dem bei der Einrichtung erstellten [!DNL Asset Compute]-Console-Arbeitsbereich hinzu. Diese Services sind Teil des JWT-Zugriffs-Tokens, das von [!DNL Asset Compute Service] erstellt wird. Auf das Token und andere Anmeldeinformationen kann innerhalb des Programmaktionsobjekts `params` zugegriffen werden.

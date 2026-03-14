@@ -2,16 +2,16 @@
 title: '[!DNL Asset Compute Service]-HTTP-API'
 description: '[!DNL Asset Compute Service]-HTTP-API zum Erstellen benutzerdefinierter Programme.'
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
-source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
+source-git-commit: aed361a577fc53caec4118e417b1c0c814617b51
 workflow-type: tm+mt
-source-wordcount: '2862'
-ht-degree: 100%
+source-wordcount: '2995'
+ht-degree: 97%
 
 ---
 
 # [!DNL Asset Compute Service]-HTTP-API {#asset-compute-http-api}
 
-Die Verwendung der API ist auf Entwicklungszwecke beschränkt. Die API wird bei der Entwicklung benutzerdefinierter Programme als Kontext bereitgestellt. [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] verwendet die API, um die Verarbeitungsinformationen an ein benutzerdefiniertes Programm zu übergeben. Weitere Informationen finden Sie unter [Verwenden von Asset-Microservices und Verarbeitungsprofilen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+Die Verwendung der API ist auf Entwicklungszwecke beschränkt. Die API wird als Kontext für die Entwicklung benutzerdefinierter Anwendungen bereitgestellt. [!DNL Adobe Experience Manager] as a verwendet [!DNL Cloud Service] die -API, um die Verarbeitungsinformationen an ein benutzerdefiniertes Programm zu übergeben. Weitere Informationen finden Sie unter [Verwenden von Asset-Microservices und Verarbeitungsprofilen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
@@ -37,7 +37,8 @@ Für alle APIs ist eine Zugriffs-Token-Authentifizierung erforderlich. Die Anfra
 
 1. `Authorization`-Kopfzeile mit Träger-Token, dem technischen Konto-Token, das über den [JWT-Austausch](https://developer.adobe.com/developer-console/docs/guides/) vom Adobe Developer Console-Projekt empfangen wurde. Die [Bereiche](#scopes) sind nachfolgend beschrieben.
 
-<!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in Adobe I/O's GitHub repo to get a new URL.
+<!-- 
+TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in Adobe I/O's GitHub repo to get a new URL.
 -->
 
 1. `x-gw-ims-org-id`-Kopfzeile mit der IMS-Organisations-ID.
@@ -373,10 +374,10 @@ Im Folgenden sind die verfügbaren Optionen für das Array `renditions` in [`/pr
 
 | Name | Typ | Beschreibung | Beispiel |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | Das Zielformat der Ausgabedarstellung kann auch `text` zum Extrahieren von Text und `xmp` zum Extrahieren von XMP-Metadaten als XML sein. Siehe [Unterstützte Formate](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/file-format-support). | `png` |
+| `fmt` | `string` | Das Zielformat der Ausgabedarstellung kann auch `text` zur Extraktion von Text und `xmp` zur Extraktion von XMP-Metadaten als XML sein. Siehe [Unterstützte Formate](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/file-format-support). | `png` |
 | `worker` | `string` | URL eines [benutzerdefinierten Programms](develop-custom-application.md). Muss eine `https://`-URL sein. Wenn dieses Feld vorhanden ist, erstellt ein benutzerdefiniertes Programm die Ausgabedarstellung. Jedes andere festgelegte Ausgabedarstellungsfeld wird dann im benutzerdefinierten Programm verwendet. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | Die URL, auf die die generierte Ausgabedarstellung mit HTTP PUT hochgeladen werden soll. | `http://w.com/img.jpg` |
-| `target` | `object` | Mehrteilige vorsignierte Informationen zum URL-Upload für die generierte Ausgabedarstellung. Diese Informationen gelten für den [direkten binären AEM-/Oak-Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) mit diesem [mehrteiligen Upload-Verhalten](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Felder:<ul><li>`urls`: Array von Zeichenfolgen, eine für jede vorsignierte Teil-URL</li><li>`minPartSize`: die Mindestgröße für eine Teil-URL</li><li>`maxPartSize`: die Maximalgröße für eine Teil-URL</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Mehrteilige vorsignierte Informationen zum URL-Upload für die generierte Ausgabedarstellung. Diese Informationen gelten für den direkten binären Upload von [AEM ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) Oak mit diesem [mehrteiligen Upload-Verhalten](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: Array von Zeichenfolgen, eine für jede vorsignierte Teil-URL</li><li>`minPartSize`: die Mindestgröße für eine Teil-URL</li><li>`maxPartSize`: die Maximalgröße für eine Teil-URL</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Optional. Der Client steuert den reservierten Bereich und gibt ihn unverändert an Ausgabedarstellungsereignisse weiter. Ermöglicht es Clients, benutzerdefinierte Informationen zum Identifizieren von Ausgabedarstellungsereignissen hinzuzufügen. Darf in benutzerdefinierten Programmen nicht geändert oder als zuverlässige Quelle verwendet werden, da Clients jederzeit Änderungen daran vornehmen können. | `{ ... }` |
 
 ### Ausgabedarstellungsspezifische Felder {#rendition-specific-fields}
@@ -394,7 +395,7 @@ Eine Liste der derzeit unterstützten Dateiformate finden Sie unter [Unterstütz
 | `xmp` | `string` | Wird nur für das Zurückschreiben von XMP-Metadaten verwendet und ist base64-kodiertes XMP zum Zurückschreiben in die angegebene Ausgabedarstellung. | |
 | `interlace` | `bool` | Erstellen Sie PNG- oder GIF-Zwischenzeilenbilder oder progressive JPEG-Bilder, indem Sie den Parameter auf `true` setzen. Hat keine Auswirkungen auf andere Dateiformate. | |
 | `jpegSize` | `number` | Ungefähre Größe der JPEG-Datei in Byte. Überschreibt eine eventuelle `quality`-Einstellung. Hat keine Auswirkungen auf andere Formate. | |
-| `dpi` | `number` oder `object` | Legen Sie DPI für x und y fest. Der Einfachheit halber kann der Parameter auch auf eine einzelne Zahl gesetzt werden, die sowohl für „x“ als auch für „y“ verwendet wird. Dies hat keine Auswirkung auf das Bild selbst. | `96` oder `{ xdpi: 96, ydpi: 96 }` |
+| `dpi` | `number` oder `object` | Legen Sie DPI für x und y fest. Der Einfachheit halber kann der Parameter auch auf eine einzelne Zahl gesetzt werden, die sowohl für „x“ als auch für „y“ verwendet wird. Dies hat keine Auswirkungen auf das Bild selbst. | `96` oder `{ xdpi: 96, ydpi: 96 }` |
 | `convertToDpi` | `number` oder `object` | Neuberechnen der DPI-Werte für x und y unter Beibehaltung der physischen Größe. Der Einfachheit halber kann der Parameter auch auf eine einzelne Zahl gesetzt werden, die sowohl für „x“ als auch für „y“ verwendet wird. | `96` oder `{ xdpi: 96, ydpi: 96 }` |
 | `files` | `array` | Liste der Dateien, die in das ZIP-Archiv aufgenommen werden sollen (`fmt=zip`). Jeder Eintrag kann entweder eine URL-Zeichenfolge oder ein Objekt mit folgenden Feldern sein:<ul><li>`url`: URL zum Herunterladen der Datei</li><li>`path`: Datei unter diesem Pfad in der ZIP-Datei speichern</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
 | `duplicate` | `string` | Handhaben von Duplikaten für ZIP-Archive (`fmt=zip`). Standardmäßig erzeugen mehrere Dateien, die im selben Pfad in der ZIP gespeichert sind, einen Fehler. Wird `duplicate` auf `ignore` gesetzt, wird nur das erste Asset gespeichert und der Rest wird ignoriert. | `ignore` |
@@ -406,7 +407,7 @@ Das PNG-Format wird für Wasserzeichen verwendet.
 
 | Name | Typ | Beschreibung | Beispiel |
 |-------------------|----------|-------------|---------|
-| `scale` | `number` | Skalierung des Wasserzeichens zwischen `0.0` und `1.0`. `1.0` bedeutet, dass das Wasserzeichen seinen ursprünglichen Maßstab (1:1) aufweist. Niedrigere Werte reduzieren die Größe des Wasserzeichens. | Ein Wert von `0.5` bedeutet die Hälfte der Originalgröße. |
+| `scale` | `number` | Größe des Wasserzeichens, zwischen `0.0` und `1.0`. `1.0` bedeutet, dass das Wasserzeichen seine ursprüngliche Skala (1) hat :1 die niedrigeren Werte die Größe des Wasserzeichens reduzieren. | Ein Wert von `0.5` bedeutet die Hälfte der Originalgröße. |
 | `image` | `url` | URL zur PNG-Datei, die für das Wasserzeichen verwendet werden soll. | |
 
 ## Asynchrone Ereignisse {#asynchronous-events}

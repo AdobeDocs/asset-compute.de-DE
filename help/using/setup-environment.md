@@ -2,10 +2,10 @@
 title: Legen Sie die erforderliche Entwicklungsumgebung für  [!DNL Asset Compute Service] fest
 description: Einrichten einer Entwicklungsumgebung für [!DNL Asset Compute Service] , um benutzerdefinierten Code zu erstellen und zu testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
+source-git-commit: aed361a577fc53caec4118e417b1c0c814617b51
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 89%
+source-wordcount: '416'
+ht-degree: 85%
 
 ---
 
@@ -52,7 +52,8 @@ Befolgen Sie diese Anforderungen und Anweisungen, um eine Entwicklungsumgebung f
 
 Nachdem Sie Ihre Umgebung eingerichtet haben, können Sie [eine benutzerdefinierte Anwendung erstellen](develop-custom-application.md).
 
-<!-- More ideas:
+<!-- 
+More ideas:
  
 * Any steps in the beginning that lead to gotchas later should be called out for caution? For example,
   * don't change some defaults initially

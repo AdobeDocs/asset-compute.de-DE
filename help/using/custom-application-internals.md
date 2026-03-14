@@ -2,10 +2,10 @@
 title: Machen Sie sich mit der Funktionsweise eines benutzerdefinierten Programms vertraut
 description: Interne Funktionsweise eines benutzerdefinierten  [!DNL Asset Compute Service] -Programms, um dessen Funktionsweise besser zu verstehen.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: f199cecfe4409e2370b30783f984062196dd807d
+source-git-commit: aed361a577fc53caec4118e417b1c0c814617b51
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 99%
+source-wordcount: '786'
+ht-degree: 98%
 
 ---
 
@@ -72,7 +72,9 @@ Nachfolgend finden Sie eine Beispielanfrage zur Verarbeitung benutzerdefinierter
 
 Das von einem benutzerdefinierten Programm verwendete [Asset Compute-SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) verarbeitet die HTTP-POST-Anfrage. Es übernimmt auch das Herunterladen der Quelle, das Hochladen von Ausgabedarstellungen, das Senden von Adobe [!DNL I/O Events]-Ereignissen und die Fehlerbehandlung.
 
-<!-- TBD: Add the application diagram. -->
+<!-- 
+TBD: Add the application diagram. 
+-->
 
 ### Programm-Code {#application-code}
 
@@ -142,7 +144,8 @@ await Promise.all(events.map(event => {
 
 Weitere Informationen zum Abrufen von Journalereignissen finden Sie unter „Adobe [[!DNL I/O Events] -API](https://developer.adobe.com/events/docs/guides/api/journaling-api#)“.
 
-<!-- TBD:
+<!-- 
+TBD:
 * Illustration of the controls/data flow.
 * Basic overview, in text and not code, of how an application works.
 -->

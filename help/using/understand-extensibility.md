@@ -2,16 +2,16 @@
 title: Lernen Sie, wie Sie  [!DNL Asset Compute Service] erweitern
 description: Wann und wie die Funktionalität von [!DNL Asset Compute Service] für die Verarbeitung benutzerdefinierter Assets erweitert wird.
 exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
-source-git-commit: 63f83ff33ac6cd090fac4f6db18000155f464643
+source-git-commit: aed361a577fc53caec4118e417b1c0c814617b51
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 99%
+source-wordcount: '304'
+ht-degree: 82%
 
 ---
 
 # Einführung in die Erweiterbarkeit {#introduction-to-extensibilty}
 
-Viele Ausgabedarstellungsanforderungen, wie die Konvertierung in Formate und die Größenanpassung von Bildern, erfolgen über [Verarbeitungsprofile in  [!DNL Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). Komplexere Geschäftsanforderungen erfordern möglicherweise eine individuell erstellte Lösung, die den Anforderungen eines Unternehmens entspricht. [!DNL Asset Compute Service] kann erweitert werden, indem Sie benutzerdefinierte Programme erstellen, die von den Verarbeitungsprofilen in [!DNL Experience Manager] aufgerufen werden. Diese benutzerdefinierten Programme decken die [unterstützten Anwendungsfälle](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use) ab.
+Viele Ausgabedarstellungsanforderungen, wie die Konvertierung in Formate und die Größenanpassung von Bildern, erfolgen über [Verarbeitungsprofile in  [!DNL Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). Komplexere Geschäftsanforderungen erfordern möglicherweise eine benutzerdefinierte Lösung, die den Anforderungen eines Unternehmens entspricht. [!DNL Asset Compute Service] können durch Erstellen benutzerdefinierter Programme erweitert werden, die von Verarbeitungsprofilen in [!DNL Experience Manager] aufgerufen werden. Diese benutzerdefinierten Programme decken die [unterstützten Anwendungsfälle](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use) ab.
 
 >[!NOTE]
 >
@@ -30,7 +30,8 @@ Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 * Stellen Sie für die Entwickelnden eine Entwicklerrolle oder Administratorberechtigungen in der Organisation sicher.
 * Stellen Sie sicher, dass Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) lokal installiert ist.
 
-<!-- TBD for later:
+<!-- 
+TBD for later:
 
 * What all accesses and licenses are required?
 * What all permissions are required to create, debug, and deploy custom applications?
