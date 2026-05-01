@@ -2,16 +2,19 @@
 cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
 type: Documentation
 role: Developer
 feature: Asset Compute Microservices
 user-guide-title: Handbuch zu Asset Compute Service
 user-guide-description: In dieser Dokumentation werden Aufgaben, wie z. B. die Entwicklung, Verwaltung, Bereitstellung und Fehlerbehebung von benutzerdefiniertem Code, in  [!DNL Asset Compute Service]  behandelt.
 breadcrumb-title: Handbuch zu Asset Compute Service
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: 9d22220466d836df075748dd1dc0bf422c620c36
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 100%
+source-wordcount: 109
+ht-degree: 91%
 
 ---
 
@@ -23,13 +26,13 @@ ht-degree: 100%
 + [Unterstützte Dateiformate](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/file-format-support)
 + [Architektur](architecture.md)
 + [API-Referenzen](api.md)
-+ Erweitern von Asset Compute Service {#extend}
++ Erweitern des Asset Compute-Service {#extend}
    + [Über das Erweitern von Compute Service](understand-extensibility.md)
    + [Einrichten der Umgebung](setup-environment.md)
    + [Die internen Konzepte eines Programms](custom-application-internals.md)
    + [Entwickeln eines benutzerdefinierten Programms](develop-custom-application.md)
    + [Testen eines benutzerdefinierten Programms](test-custom-application.md)
    + [Bereitstellen eines benutzerdefinierten Programms](deploy-custom-application.md)
-   + [Integration und Verwendung in  [!DNL Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview)
+   + [Integration und Verwendung von in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview)
 + [Fehlerbehebung](troubleshooting.md)
 + [Beiträge zum Open-Source-Projekt](contribute-to-compute-service.md)
