@@ -2,16 +2,14 @@
 cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
-product_v2:
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-  - id: d09181b5-a36a-43de-ba01-36641440bc43
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8id: d09181b5-a36a-43de-ba01-36641440bc43
 type: Documentation
 role: Developer
 feature: Asset Compute Microservices
 user-guide-title: Handbuch zu Asset Compute Service
 user-guide-description: In dieser Dokumentation werden Aufgaben, wie z. B. die Entwicklung, Verwaltung, Bereitstellung und Fehlerbehebung von benutzerdefiniertem Code, in  [!DNL Asset Compute Service]  behandelt.
 breadcrumb-title: Handbuch zu Asset Compute Service
-source-git-commit: 9d22220466d836df075748dd1dc0bf422c620c36
+source-git-commit: 7997d284c6051dd2b9f7635f955bdc49d52e843a
 workflow-type: tm+mt
 source-wordcount: 109
 ht-degree: 91%
