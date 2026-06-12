@@ -3,10 +3,18 @@ title: '[!DNL Asset Compute Service]-HTTP-API'
 description: '[!DNL Asset Compute Service]-HTTP-API zum Erstellen benutzerdefinierter Programme.'
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
 TQID: https://experienceleague.adobe.com/fewAzOtKA-XTmpv-6Q0mlqXpalMWva6GpHlJSW6wPog
-product_v2: id: d09181b5-a36a-43de-ba01-36641440bc43id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: ae478996-b206-4712-9b0c-dc78a2644453id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085id: e17747bc-9b7b-44e6-a443-f54229a02620
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+  - id: ae478996-b206-4712-9b0c-dc78a2644453
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+  - id: e17747bc-9b7b-44e6-a443-f54229a02620
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 2510f77fed8d0f0708e09f32d0b13a437d2ede4f
 workflow-type: tm+mt
 source-wordcount: 2995
@@ -382,7 +390,7 @@ Im Folgenden sind die verfügbaren Optionen für das Array `renditions` in [`/pr
 | `fmt` | `string` | Das Zielformat der Ausgabedarstellung kann auch `text` zur Extraktion von Text und `xmp` zur Extraktion von XMP-Metadaten als XML sein. Siehe [Unterstützte Formate](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/file-format-support). | `png` |
 | `worker` | `string` | URL eines [benutzerdefinierten Programms](develop-custom-application.md). Muss eine `https://`-URL sein. Wenn dieses Feld vorhanden ist, erstellt ein benutzerdefiniertes Programm die Ausgabedarstellung. Jedes andere festgelegte Ausgabedarstellungsfeld wird dann im benutzerdefinierten Programm verwendet. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | Die URL, auf die die generierte Ausgabedarstellung mit HTTP PUT hochgeladen werden soll. | `http://w.com/img.jpg` |
-| `target` | `object` | Mehrteilige vorsignierte Informationen zum URL-Upload für die generierte Ausgabedarstellung. Diese Informationen gelten für den direkten binären Upload von [AEM ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) Oak mit diesem [mehrteiligen Upload-Verhalten](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: Array von Zeichenfolgen, eine für jede vorsignierte Teil-URL</li><li>`minPartSize`: die Mindestgröße für eine Teil-URL</li><li>`maxPartSize`: die Maximalgröße für eine Teil-URL</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Mehrteilige vorsignierte Informationen zum URL-Upload für die generierte Ausgabedarstellung. Diese Informationen gelten für den direkten binären Upload von [AEM &#x200B;](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) Oak mit diesem [mehrteiligen Upload-Verhalten](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: Array von Zeichenfolgen, eine für jede vorsignierte Teil-URL</li><li>`minPartSize`: die Mindestgröße für eine Teil-URL</li><li>`maxPartSize`: die Maximalgröße für eine Teil-URL</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Optional. Der Client steuert den reservierten Bereich und gibt ihn unverändert an Ausgabedarstellungsereignisse weiter. Ermöglicht es Clients, benutzerdefinierte Informationen zum Identifizieren von Ausgabedarstellungsereignissen hinzuzufügen. Darf in benutzerdefinierten Programmen nicht geändert oder als zuverlässige Quelle verwendet werden, da Clients jederzeit Änderungen daran vornehmen können. | `{ ... }` |
 
 ### Ausgabedarstellungsspezifische Felder {#rendition-specific-fields}
