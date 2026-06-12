@@ -13,11 +13,11 @@ In dieser Datei wird beschrieben, wie Sie einen Beitrag leisten können, und es 
 
 ## Adobe Open Source-Verhaltenskodex
 
-Dieses Projekt hat den [Open Source-Verhaltenskodex für Adobe ](code-of-conduct.md). Mit Ihrer Teilnahme an der Dokumentation zu AEM erklären Sie sich damit einverstanden, diesen Verhaltenskodex einzuhalten. Melden Sie inakzeptables Verhalten an [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+Dieses Projekt hat den [Open Source-Verhaltenskodex für Adobe &#x200B;](code-of-conduct.md). Mit Ihrer Teilnahme an der Dokumentation zu AEM erklären Sie sich damit einverstanden, diesen Verhaltenskodex einzuhalten. Melden Sie inakzeptables Verhalten an [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Richtlinien für Beiträge
 
-Adobe begrüßt zwar Beiträge zur Verbesserung der AEM-Dokumentation, stellt jedoch sicher, dass die Beiträge nach Möglichkeit bestimmten Richtlinien und Standards entsprechen. Weitere Informationen finden [ in den Richtlinien für Beiträge zur Dokumentation ](guidelines.md) AEM .
+Adobe begrüßt zwar Beiträge zur Verbesserung der AEM-Dokumentation, stellt jedoch sicher, dass die Beiträge nach Möglichkeit bestimmten Richtlinien und Standards entsprechen. Weitere Informationen finden [&#x200B; in den Richtlinien für Beiträge zur Dokumentation &#x200B;](guidelines.md) AEM .
 
 ## So können Sie einen Beitrag leisten
 
@@ -58,5 +58,5 @@ Adobe freut sich über jeden Beitrag und prüft Ihren Beitrag, sofern er im öff
 
 ## Weiterführende Informationen
 
-Weitere Informationen zur Verwendung der GitHub-Autorenplattform ](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction) Sie im Adobe-Handbuch für Mitwirkende an Dokumenten .[
+Weitere Informationen zur Verwendung der GitHub-Autorenplattform [&#128279;](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction) Sie im Adobe-Handbuch für Mitwirkende an Dokumenten .
 
