@@ -3,15 +3,10 @@ title: Fehlerbehebung [!DNL Asset Compute Service]
 description: Fehlerbehebung und Debugging von benutzerdefinierten Programmen mit  [!DNL Asset Compute Service].
 exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
 TQID: https://experienceleague.adobe.com/ccEul0gYUEBOlgZmDcpy99sP4AY6GMb108xJd2WjcNI
-product_v2:
-  - id: d09181b5-a36a-43de-ba01-36641440bc43
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: d09181b5-a36a-43de-ba01-36641440bc43id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 2510f77fed8d0f0708e09f32d0b13a437d2ede4f
 workflow-type: tm+mt
 source-wordcount: 293
@@ -32,7 +27,7 @@ Einige allgemeine Tipps, die Ihnen bei der Fehlerbehebung mit Asset Compute Serv
 
 ## Probleme beim Anmelden über Adobe [!DNL aio-cli] {#login-via-aio-cli}
 
-Wenn Sie Probleme haben, sich über Adobe [!DNL aio-cli][&#128279;](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli) bei [!DNL Adobe Developer Console] anzumelden, fügen Sie manuell die Anmeldeinformationen hinzu, die zum Entwickeln, Testen und Bereitstellen Ihrer benutzerdefinierten Anwendung erforderlich sind:
+Wenn Sie Probleme haben, sich über Adobe [!DNL aio-cli]](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli) bei [!DNL Adobe Developer Console] [anzumelden, fügen Sie manuell die Anmeldeinformationen hinzu, die zum Entwickeln, Testen und Bereitstellen Ihrer benutzerdefinierten Anwendung erforderlich sind:
 
 1. Navigieren Sie zu Ihrem Adobe Developer App-Builder-Projekt und -Arbeitsbereich in der [Adobe-Entwicklerkonsole](https://developer.adobe.com/console/user/servicesandapis) und klicken Sie oben rechts auf **[!UICONTROL Herunterladen]**. Öffnen Sie diese Datei und speichern Sie diese JSON an einem sicheren Ort auf Ihrem Computer.
 
