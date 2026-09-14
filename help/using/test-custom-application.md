@@ -1,22 +1,24 @@
 ---
-title: Testen und Debuggen von benutzerdefinierten  [!DNL Asset Compute Service] -Programmen
-description: Testen und Debuggen von benutzerdefinierten  [!DNL Asset Compute Service] -Programmen.
+title: Testen und Debuggen [!DNL Asset Compute Service] benutzerdefinierten Anwendung
+description: Testen und Debuggen [!DNL Asset Compute Service] benutzerdefinierten Anwendung.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 TQID: https://experienceleague.adobe.com/43OlMHlUxu78CbxOEaAXi7gN6pwYS3QqGgV44WDSyCc
 product_v2:
   - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 source-git-commit: 2510f77fed8d0f0708e09f32d0b13a437d2ede4f
 workflow-type: tm+mt
-source-wordcount: 855
-ht-degree: 97%
-
+source-wordcount: '857'
+ht-degree: 96%
 ---
-
 # Testen und Debuggen eines benutzerdefinierten Programms {#test-debug-custom-worker}
 
 ## Ausführen von Komponententests für eine benutzerdefinierte Anwendung {#test-custom-worker}
