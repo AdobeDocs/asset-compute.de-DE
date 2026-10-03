@@ -58,5 +58,5 @@ Adobe freut sich über jeden Beitrag und prüft Ihren Beitrag, sofern er im öff
 
 ## Weiterführende Informationen
 
-Weitere Informationen zur Verwendung der GitHub-Autorenplattform [&#128279;](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction) Sie im Adobe-Handbuch für Mitwirkende an Dokumenten .
+Weitere Informationen zur Verwendung der GitHub-Autorenplattform [&#128279;](https://experienceleague.adobe.com/de/docs/contributor/contributor-guide/introduction) Sie im Adobe-Handbuch für Mitwirkende an Dokumenten .
 
