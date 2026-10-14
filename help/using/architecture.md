@@ -1,24 +1,27 @@
 ---
-title: Architektur von  [!DNL Asset Compute Service]
-description: So arbeiten [!DNL Asset Compute Service] -API, Programme und SDK zusammen, um einen Cloud-nativen Asset-Verarbeitungs-Service bereitzustellen.
+title: Architektur von [!DNL Asset Compute Service]
+description: So arbeiten [!DNL Asset Compute Service] API, Programme und SDK zusammen, um einen Cloud-nativen Asset-Verarbeitungs-Service bereitzustellen.
 exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
 TQID: https://experienceleague.adobe.com/HM9aYFHI98DFs4rfcStr-mpAfYVrjvMtlO6N7azO-20
 product_v2:
   - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+    internal-label: APIs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 source-git-commit: 2510f77fed8d0f0708e09f32d0b13a437d2ede4f
 workflow-type: tm+mt
-source-wordcount: 494
-ht-degree: 98%
-
+source-wordcount: '495'
+ht-degree: 95%
 ---
-
 # Architektur von [!DNL Asset Compute Service] {#overview}
 
 [!DNL Asset Compute Service] basiert auf der Server-losen Adobe [!DNL `I/O Runtime`]-Plattform. Der Service bietet Unterstützung mit Adobe Sensei-Inhalts-Services für Assets. Der aufrufende Client (es wird nur [!DNL Experience Manager] as a [!DNL Cloud Service] unterstützt) erhält die von Adobe Sensei generierten Informationen, nach denen er für das Asset gesucht hat. Die zurückgegebenen Informationen liegen im JSON-Format vor.
