@@ -196,7 +196,7 @@ Im Programm-Code können Sie externe API-Aufrufe durchführen, um die Programmve
 ```javascript
 exports.main = worker(async function (source, rendition) {
 
-    const response = await fetch('https://adobe.com', {
+    const response = await fetch('https://adobe.com/de', {
         method: 'GET',
         Authorization: params.AUTH_KEY
     })
